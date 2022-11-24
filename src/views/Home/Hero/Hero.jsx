@@ -28,6 +28,10 @@ import { artists } from "../../../data/data";
 import noPhoto from "../../../assets/images/noPhoto.png";
 import ArtistCard from "../../../components/ArtistCard/ArtistCard";
 
+// image
+import branding from "../../../assets/images/branding.jpeg";
+import sphere from "../../../assets/images/sphere.png";
+
 const Hero = () => {
   const { languageState } = useLanguage();
 
@@ -37,7 +41,6 @@ const Hero = () => {
       sx={{
         gap: "20px",
         display: "flex",
-        paddingBottom: "",
         height: "calc(100vh - 80px)",
         flexDirection: { xs: "column", md: "row" },
         alignItems: { md: "flex-end", xs: "flex-start" },
@@ -48,11 +51,48 @@ const Hero = () => {
         sx={{
           width: "100%",
           height: "100%",
+          display: "center",
           div: { height: "100%" },
+          alignItems: "center",
+          justifyContent: "center",
+          position: "relative",
+          overflow: "hidden",
         }}
         id="carousel"
       >
-        <Carousel>
+        <Typography>LOGO</Typography>
+        <img
+          src={sphere}
+          alt="sphere"
+          className={css({
+            position: "absolute",
+            width: "110px",
+            height: "110px",
+            top: "-50px",
+            left: "20px",
+          })}
+        />
+        <img
+          src={sphere}
+          alt="sphere"
+          className={css({
+            position: "absolute",
+            width: "500px",
+            right: "20px",
+          })}
+        />
+        <img
+          src={sphere}
+          alt="sphere"
+          className={css({
+            position: "absolute",
+            width: "750px",
+            right: "-190px",
+            bottom: "-450px",
+          })}
+        />
+
+        {/* <Carousel>
           {Object.values(hero).map((item, i) => (
             <Box
               sx={{
@@ -91,7 +131,7 @@ const Hero = () => {
               ))}
             </Box>
           ))}
-        </Carousel>
+              </Carousel> */}
       </Box>
     </Box>
   );

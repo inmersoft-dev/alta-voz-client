@@ -1,7 +1,11 @@
 import Slider from "react-slick";
+import { Link } from "react-router-dom";
+
+// @emotion/css
+import { css } from "@emotion/css";
 
 // @mui/material
-import { Box, Typography } from "@mui/material";
+import { Box, Button, Typography } from "@mui/material";
 
 // components
 import AlbumCard from "../../../components/AlbumCard/AlbumCard";
@@ -38,9 +42,22 @@ const Albums = () => {
         },
       }}
     >
-      <Typography variant="h4" sx={{ marginBottom: "20px" }}>
-        {languageState.texts.Home.Albums.Title}
-      </Typography>
+      <Box
+        sx={{
+          width: "100%",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-between",
+        }}
+      >
+        <Typography variant="h4" sx={{ marginBottom: "20px" }}>
+          {languageState.texts.Home.Albums.Title}
+        </Typography>
+        <Link to="/albums" className={css({ textDecoration: "none" })}>
+          <Button>{languageState.texts.Home.SeeMore}</Button>
+        </Link>
+      </Box>
+
       <Box
         sx={{
           "&:first-child": {

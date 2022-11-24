@@ -24,7 +24,7 @@ const SongCard = (props) => {
 
   return (
     <Link
-      to={`/details?type=album&id=${item.id}`}
+      to={`/details?type=song&id=${item.id}`}
       className={css({ color: "inherit", textDecoration: "none" })}
     >
       <Box
