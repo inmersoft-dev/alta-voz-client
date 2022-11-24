@@ -1,5 +1,6 @@
 // sito components
 import SitoContainer from "sito-container";
+import Artists from "./Artists/Artists";
 
 // sections
 
@@ -9,6 +10,7 @@ const Home = () => {
   return (
     <SitoContainer flexDirection="column" sx={{ height: "100%" }}>
       <Hero />
+      <Artists />
     </SitoContainer>
   );
 };

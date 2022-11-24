@@ -1,6 +1,10 @@
 import * as ReactDOMClient from "react-dom/client";
-import "@fontsource/roboto"
-import "@fontsource/poppins"
+import "@fontsource/roboto";
+import "@fontsource/poppins";
+
+// Import css files
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 // context
 import { ModeProvider } from "./context/ModeProvider";

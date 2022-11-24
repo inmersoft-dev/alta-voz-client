@@ -6,15 +6,15 @@ const dark = createTheme({
   palette: {
     type: "dark",
     primary: {
-      main: "#fff",
-      light: "#fff",
-      dark: "#b2b2b2",
+      main: "#fa4e67",
+      light: "#fb7185",
+      dark: "#af3648",
       contrastText: "#222",
     },
     secondary: {
-      main: "#3D3F43",
-      light: "#636568",
-      dark: "#2a2c2e",
+      main: "#f9b249",
+      light: "#fac16d",
+      dark: "#ae7c33",
       contrastText: "#ffffff",
     },
     disabled: {
@@ -49,7 +49,7 @@ const dark = createTheme({
     divider: "rgba(255,255,255,0.7)",
     background: {
       default: "#1f1d1c",
-      paper: "#4e2c34",
+      paper: "#595354",
     },
     text: {
       main: "#fff",

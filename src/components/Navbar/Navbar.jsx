@@ -1,17 +1,26 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
+// @emotion/css
+import { css } from "@emotion/css";
+
 // @mui/material
 import {
   Box,
-  Divider,
-  Link as MUILink,
   Typography,
   Button,
+  FormControl,
+  OutlinedInput,
+  InputAdornment,
+  IconButton,
+  useTheme,
 } from "@mui/material";
 
 // @mui/icons-material
 import MenuIcon from "@mui/icons-material/Menu";
+import SearchIcon from "@mui/icons-material/Search";
+import DarkModeIcon from "@mui/icons-material/DarkMode";
+import LightModeIcon from "@mui/icons-material/LightMode";
 
 // sito components
 import SitoImage from "sito-image";
@@ -27,10 +36,18 @@ import { useLanguage } from "../../context/LanguageProvider";
 // import logoHorizontal from "../../assets/images/logo-horizontal.png";
 
 const Navbar = () => {
-  const { modeState } = useMode();
+  const theme = useTheme();
+  const { modeState, setModeState } = useMode();
   const { languageState } = useLanguage();
 
   const [showDrawer, setShowDrawer] = useState(false);
+
+  const [toSearch, setToSearch] = useState("");
+  const handleToSearch = (e) => setToSearch(e.target.value);
+
+  const actionToSearch = () => {};
+
+  const preventDefault = (event) => event.preventDefault();
 
   return (
     <Box
@@ -38,15 +55,24 @@ const Navbar = () => {
       alignItems="center"
       sx={{
         display: "flex",
+        background: theme.palette.background.paper,
         padding: { xl: "20px 5rem", lg: "20px 4rem", xs: "20px" },
+        gap: "50%",
         img: {
           filter: modeState.mode === "light" ? "none" : "invert(1)",
         },
       }}
     >
-      <Link to="/">
-        LOGO
-        {/* <SitoImage
+      <Box display="flex" alignItems="center" gap="30px" flex={1}>
+        <Link
+          to="/"
+          className={css({
+            color: theme.palette.secondary.main,
+            textDecoration: "none",
+          })}
+        >
+          LOGO
+          {/* <SitoImage
           src={logoHorizontal}
           alt="logo"
           sx={{
@@ -55,16 +81,69 @@ const Navbar = () => {
             filter: "grayscale(1)",
           }}
         /> */}
-      </Link>
-      <Box sx={{ gap: "30px", display: { xs: "none", md: "flex" } }}>
+        </Link>
+        <FormControl
+          sx={{ flex: 1, div: { borderRadius: "25px" } }}
+          variant="outlined"
+          component="form"
+        >
+          <OutlinedInput
+            id="search"
+            color="primary"
+            type="text"
+            size="small"
+            value={toSearch}
+            placeholder={languageState.texts.Navbar.Search.placeholder}
+            onChange={handleToSearch}
+            endAdornment={
+              <InputAdornment position="end">
+                <IconButton
+                  color="primary"
+                  type="submit"
+                  focused
+                  aria-label="search"
+                  onClick={actionToSearch}
+                  onMouseDown={preventDefault}
+                  edge="end"
+                >
+                  <SearchIcon />
+                </IconButton>
+              </InputAdornment>
+            }
+          />
+        </FormControl>
+      </Box>
+
+      <Box
+        sx={{
+          gap: "30px",
+          display: { xs: "none", md: "flex" },
+          alignItems: "center",
+        }}
+      >
         {languageState.texts.Navbar.Links.map((item) => (
-          <Link key={item.to} to={item.to}>
-            <Typography color="primary" variant="caption">
-              {item.label}
-            </Typography>
+          <Link
+            key={item.to}
+            to={item.to}
+            className={css({
+              textDecoration: "none",
+              color: theme.palette.disabled.light,
+              "&:hover": {
+                color: theme.palette.disabled.dark,
+              },
+            })}
+          >
+            <Typography>{item.label}</Typography>
           </Link>
         ))}
+        <IconButton
+          color="inherit"
+          onClick={() => setModeState({ type: "toggle" })}
+        >
+          {modeState.mode === "light" ? <DarkModeIcon /> : <LightModeIcon />}
+        </IconButton>
       </Box>
+
       <Button
         onClick={() => setShowDrawer(true)}
         variant="contained"
