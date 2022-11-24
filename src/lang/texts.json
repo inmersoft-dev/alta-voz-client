@@ -15,8 +15,15 @@
       "Button": "Ver Ahora"
     },
     "Home": {
+      "SeeMore": "Más",
       "Artists": {
         "Title": "Top de artistas"
+      },
+      "Albums": {
+        "Title": "Top de álbunes"
+      },
+      "Songs": {
+        "Title": "Top más escuchadas"
       }
     },
     "Navbar": {

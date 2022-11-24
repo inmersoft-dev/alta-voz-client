@@ -4,30 +4,30 @@ import Slider from "react-slick";
 import { Box, Typography } from "@mui/material";
 
 // components
-import ArtistCard from "../../../components/ArtistCard/ArtistCard";
+import SongCard from "../../../components/SongCard/SongCard";
 import InViewComponent from "../../../components/InViewComponent/InViewComponent";
 
 // contexts
 import { useLanguage } from "../../../context/LanguageProvider";
 
 // test
-import { artists } from "../../../data/data";
+import { songs } from "../../../data/data";
 
-const Artists = () => {
+const Songs = () => {
   const { languageState } = useLanguage();
 
   var settings = {
     dots: false,
     infinite: false,
     speed: 1000,
-    slidesToShow: 6,
-    slidesToScroll: 6,
+    slidesToShow: 5,
+    slidesToScroll: 5,
   };
 
   return (
     <Box
       sx={{
-        marginTop: "20px",
+        marginTop: "100px",
         gap: "20px",
         display: "flex",
         flexDirection: "column",
@@ -39,7 +39,7 @@ const Artists = () => {
       }}
     >
       <Typography variant="h4" sx={{ marginBottom: "20px" }}>
-        {languageState.texts.Home.Artists.Title}
+        {languageState.texts.Home.Songs.Title}
       </Typography>
       <Box
         sx={{
@@ -50,9 +50,13 @@ const Artists = () => {
         }}
       >
         <Slider {...settings}>
-          {artists.slice(0, 18).map((item, i) => (
-            <InViewComponent key={item.id} delay={`0.${i + 1}s`}>
-              <ArtistCard item={item} />
+          {songs.slice(0, 18).map((item, i) => (
+            <InViewComponent
+              key={item.id}
+              delay={`0.${i + 1}s`}
+              sx={{ marginRight: "20px" }}
+            >
+              <SongCard item={item} />
             </InViewComponent>
           ))}
         </Slider>
@@ -61,4 +65,4 @@ const Artists = () => {
   );
 };
 
-export default Artists;
+export default Songs;

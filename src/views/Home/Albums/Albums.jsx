@@ -4,16 +4,16 @@ import Slider from "react-slick";
 import { Box, Typography } from "@mui/material";
 
 // components
-import ArtistCard from "../../../components/ArtistCard/ArtistCard";
+import AlbumCard from "../../../components/AlbumCard/AlbumCard";
 import InViewComponent from "../../../components/InViewComponent/InViewComponent";
 
 // contexts
 import { useLanguage } from "../../../context/LanguageProvider";
 
 // test
-import { artists } from "../../../data/data";
+import { albums } from "../../../data/data";
 
-const Artists = () => {
+const Albums = () => {
   const { languageState } = useLanguage();
 
   var settings = {
@@ -39,7 +39,7 @@ const Artists = () => {
       }}
     >
       <Typography variant="h4" sx={{ marginBottom: "20px" }}>
-        {languageState.texts.Home.Artists.Title}
+        {languageState.texts.Home.Albums.Title}
       </Typography>
       <Box
         sx={{
@@ -50,9 +50,9 @@ const Artists = () => {
         }}
       >
         <Slider {...settings}>
-          {artists.slice(0, 18).map((item, i) => (
+          {albums.slice(0, 18).map((item, i) => (
             <InViewComponent key={item.id} delay={`0.${i + 1}s`}>
-              <ArtistCard item={item} />
+              <AlbumCard item={item} />
             </InViewComponent>
           ))}
         </Slider>
@@ -61,4 +61,4 @@ const Artists = () => {
   );
 };
 
-export default Artists;
+export default Albums;

@@ -26,6 +26,7 @@ import { artists } from "../../../data/data";
 
 // images
 import noPhoto from "../../../assets/images/noPhoto.png";
+import ArtistCard from "../../../components/ArtistCard/ArtistCard";
 
 const Hero = () => {
   const { languageState } = useLanguage();
@@ -81,27 +82,11 @@ const Hero = () => {
               />
               {artists.slice(0, 3).map((item, i) => (
                 <InViewComponent
+                  key={item.id}
                   delay={`0.${i + 1}s`}
                   sx={{ height: "260px !important" }}
                 >
-                  <Box
-                    display="flex"
-                    flexDirection="column"
-                    alignItems="center"
-                    gap="10px"
-                    sx={{ height: "260px !important" }}
-                  >
-                    <SitoImage
-                      sx={{
-                        width: "200px",
-                        height: "200px !important",
-                        borderRadius: "100%",
-                      }}
-                      src={item.photo || noPhoto}
-                      alt={item.id}
-                    />
-                    <Typography>{item.name}</Typography>
-                  </Box>
+                  <ArtistCard item={item} />
                 </InViewComponent>
               ))}
             </Box>
