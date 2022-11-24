@@ -5,6 +5,7 @@ import SitoContainer from "sito-container";
 import Hero from "./Hero/Hero";
 import Songs from "./Songs/Songs";
 import Albums from "./Albums/Albums";
+import Genres from "./Genres/Genres";
 import Artists from "./Artists/Artists";
 
 const Home = () => {
@@ -14,6 +15,7 @@ const Home = () => {
       <Songs />
       <Artists />
       <Albums />
+      <Genres />
     </SitoContainer>
   );
 };

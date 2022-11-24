@@ -24,6 +24,9 @@
       },
       "Songs": {
         "Title": "Top más escuchadas"
+      },
+      "Genres": {
+        "Title": "Top de géneros"
       }
     },
     "Navbar": {
