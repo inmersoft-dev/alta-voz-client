@@ -14,6 +14,7 @@ import dark from "./assets/theme/dark";
 import light from "./assets/theme/light";
 
 // components
+import Player from "./components/Player/Player";
 import Notification from "./components/Notification/Notification";
 
 // contexts
@@ -41,6 +42,7 @@ const App = () => {
       <ThemeProvider theme={modeState.mode === "light" ? light : dark}>
         <CssBaseline />
         <Notification />
+        <Player />
         <Box>
           <BrowserRouter>
             <Routes>

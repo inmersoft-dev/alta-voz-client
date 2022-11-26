@@ -33,7 +33,7 @@ const ArtistCard = (props) => {
         justifyContent="center"
       >
         <SitoImage
-          sx={{ width: "200px", height: "200px", borderRadius: "100%" }}
+          sx={{ width: "150px", height: "150px", borderRadius: "100%" }}
           src={item.photo || noGenre}
           alt={item.id}
         />

@@ -6,7 +6,7 @@ import PropTypes from "prop-types";
 import { css } from "@emotion/css";
 
 // @mui/material
-import { useTheme, Box, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 
 // sito components
 import SitoImage from "sito-image";
@@ -18,8 +18,6 @@ import noSong from "../../assets/images/noSong.png";
 import { genres } from "../../data/data";
 
 const SongCard = (props) => {
-  const theme = useTheme();
-
   const { item } = props;
 
   return (
@@ -29,23 +27,15 @@ const SongCard = (props) => {
     >
       <Box
         gap="5px"
-        component="a"
         display="flex"
         alignItems="center"
         flexDirection="column"
         justifyContent="center"
-        sx={{
-          borderRadius: "15px",
-          padding: "5px 5px 10px 5px",
-          background: item.genres.length
-            ? genres[item.genres[0]].color
-            : theme.palette.primary.main,
-        }}
       >
         <SitoImage
           sx={{
-            width: "100%",
-            height: "200px",
+            width: "150px",
+            height: "150px",
             borderRadius: "15px",
             objectFit: "cover",
           }}

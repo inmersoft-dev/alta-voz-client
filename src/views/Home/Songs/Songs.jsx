@@ -24,8 +24,8 @@ const Songs = () => {
     dots: false,
     infinite: false,
     speed: 1000,
-    slidesToShow: 5,
-    slidesToScroll: 5,
+    slidesToShow: 7,
+    slidesToScroll: 7,
   };
 
   return (
@@ -67,11 +67,7 @@ const Songs = () => {
       >
         <Slider {...settings}>
           {songs.slice(0, 18).map((item, i) => (
-            <InViewComponent
-              key={item.id}
-              delay={`0.${i + 1}s`}
-              sx={{ marginRight: "20px" }}
-            >
+            <InViewComponent key={item.id} delay={`0.${i + 1}s`}>
               <SongCard item={item} />
             </InViewComponent>
           ))}
