@@ -56,7 +56,7 @@ const Navbar = () => {
       sx={{
         display: "flex",
         background: theme.palette.background.paper,
-        padding: { xl: "20px 5rem", lg: "20px 4rem", xs: "20px" },
+        padding: "5px 25px",
         gap: "50%",
         img: {
           filter: modeState.mode === "light" ? "none" : "invert(1)",
@@ -83,7 +83,11 @@ const Navbar = () => {
         /> */}
         </Link>
         <FormControl
-          sx={{ flex: 1, div: { borderRadius: "25px" } }}
+          sx={{
+            flex: 1,
+            div: { borderRadius: "25px" },
+            input: { padding: "3.5px 14px", fontSize: "15px" },
+          }}
           variant="outlined"
           component="form"
         >
@@ -106,7 +110,7 @@ const Navbar = () => {
                   onMouseDown={preventDefault}
                   edge="end"
                 >
-                  <SearchIcon />
+                  <SearchIcon fontSize="small" />
                 </IconButton>
               </InputAdornment>
             }

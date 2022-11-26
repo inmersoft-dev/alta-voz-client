@@ -5,7 +5,11 @@ import { Link } from "react-router-dom";
 import { css } from "@emotion/css";
 
 // @mui/material
-import { Box, Button, Typography } from "@mui/material";
+import { useTheme, Box, Button, Typography } from "@mui/material";
+
+// @mui/icons-material
+import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
+import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 
 // components
 import GenreCard from "../../../components/GenreCard/GenreCard";
@@ -18,14 +22,75 @@ import { useLanguage } from "../../../context/LanguageProvider";
 import { genres } from "../../../data/data";
 
 const Genres = () => {
+  const theme = useTheme();
   const { languageState } = useLanguage();
 
   var settings = {
     dots: false,
     infinite: false,
     speed: 1000,
-    slidesToShow: 5,
-    slidesToScroll: 5,
+    slidesToShow: 6,
+    slidesToScroll: 6,
+    prevArrow: (
+      <Button
+        color="primary"
+        variant="contained"
+        sx={{
+          zIndex: 20,
+          "&:before": {
+            display: "none",
+          },
+          display: "flex !important",
+          position: "absolute",
+          minWidth: 0,
+          width: "35px",
+          height: "35px",
+          borderRadius: "100%",
+        }}
+      >
+        <ChevronLeftIcon
+          sx={{
+            color: `${theme.palette.disabled.main} !important`,
+            marginLeft: "-3px",
+          }}
+        />
+      </Button>
+    ),
+    nextArrow: (
+      <Button
+        color="primary"
+        variant="contained"
+        sx={{
+          zIndex: 20,
+          "&:before": {
+            display: "none",
+          },
+          display: "flex !important",
+          position: "absolute",
+          minWidth: 0,
+          width: "35px",
+          height: "35px",
+          borderRadius: "100%",
+        }}
+      >
+        <ChevronRightIcon
+          sx={{
+            color: `${theme.palette.disabled.main} !important`,
+          }}
+        />
+      </Button>
+    ),
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          arrows: false,
+          centerMode: true,
+          centerPadding: "40px",
+          slidesToShow: 3,
+        },
+      },
+    ],
   };
 
   return (
