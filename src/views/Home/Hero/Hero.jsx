@@ -105,8 +105,8 @@ const Artists = () => {
         display: "flex",
         flexDirection: "column",
         padding: {
-          xl: "20px 0 20px 0",
-          xs: "20px 0 20px 0",
+          xl: "40px 0 40px 0",
+          xs: "40px 0 40px 0",
         },
       }}
     >
@@ -154,7 +154,7 @@ const Artists = () => {
                       alignItems: "flex-start",
                     }}
                   >
-                    <Typography variant="h4">
+                    <Typography variant="h4" sx={{ color: "aliceblue" }}>
                       {item.title.length > 20
                         ? `${item.title.substring(0, 20)}...`
                         : item.title}

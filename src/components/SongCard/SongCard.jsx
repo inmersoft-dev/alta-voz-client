@@ -6,7 +6,7 @@ import PropTypes from "prop-types";
 import { css } from "@emotion/css";
 
 // @mui/material
-import { Box, Typography } from "@mui/material";
+import { useTheme, Box, Typography } from "@mui/material";
 
 // @mui/icons-material
 import PlayCircleFilledWhiteIcon from "@mui/icons-material/PlayCircleFilledWhite";
@@ -18,6 +18,7 @@ import SitoImage from "sito-image";
 import { genres } from "../../data/data";
 
 const SongCard = (props) => {
+  const theme = useTheme();
   const { item, index } = props;
 
   return (
@@ -81,10 +82,13 @@ const SongCard = (props) => {
             />
           </Box>
         </Box>
-        <Typography fontWeight="bold" sx={{ color: "aliceblue" }}>
+        <Typography
+          fontWeight="bold"
+          sx={{ color: theme.palette.disabled.main }}
+        >
           {item.name}
         </Typography>
-        <Typography sx={{ color: "aliceblue" }}>
+        <Typography sx={{ color: theme.palette.disabled.main }}>
           {genres[item.genres[0]].name}
         </Typography>
       </Box>

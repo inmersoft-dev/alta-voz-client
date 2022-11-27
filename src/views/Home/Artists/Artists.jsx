@@ -101,10 +101,11 @@ const Artists = () => {
         display: "flex",
         flexDirection: "column",
         padding: {
-          xl: "20px 5rem 20px 5rem",
-          lg: "20px 5rem 20px 4rem",
-          xs: "20px",
+          xl: "40px 5rem 40px 5rem",
+          lg: "40px 4rem 40px 4rem",
+          xs: "30px 20px",
         },
+        background: theme.palette.background.paper,
       }}
     >
       <Box display="flex" alignItems="center" justifyContent="space-between">

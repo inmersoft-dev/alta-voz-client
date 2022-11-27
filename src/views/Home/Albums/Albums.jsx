@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { css } from "@emotion/css";
 
 // @mui/material
-import { Box, Button, Typography } from "@mui/material";
+import { Box, Button, Typography, useTheme } from "@mui/material";
 
 // components
 import PrettyGrid from "../../../components/Grid/PrettyGrid";
@@ -13,19 +13,20 @@ import PrettyGrid from "../../../components/Grid/PrettyGrid";
 import { useLanguage } from "../../../context/LanguageProvider";
 
 const Albums = () => {
+  const theme = useTheme();
   const { languageState } = useLanguage();
 
   return (
     <Box
       sx={{
-        marginTop: "40px",
+        marginTop: "80px",
         gap: "20px",
         display: "flex",
         flexDirection: "column",
         padding: {
-          xl: "20px 5rem 20px 5rem",
-          lg: "20px 5rem 20px 4rem",
-          xs: "20px",
+          xl: "40px 5rem 40px 5rem",
+          lg: "40px 4rem 40px 4rem",
+          xs: "30px 20px",
         },
       }}
     >

@@ -16,6 +16,11 @@
       "Hero": {
         "Button": "Ver Ahora"
       },
+      "CatchToAction": {
+        "Title": "Compones canciones?",
+        "Description": "Con 18 años de historia, más de 138 mil artistas y más de 1 millón de canciones, somos una plataforma especializada en enseñar e impulsar carreras musicales.",
+        "Button": "Unirme ahora!"
+      },
       "Artists": {
         "Title": "Mejores artistas",
         "Description": "La semana está bombeando con estos artistas!",

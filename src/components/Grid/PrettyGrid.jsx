@@ -70,13 +70,19 @@ const PrettyGrid = (props) => {
               }}
             >
               <Box>
-                <Typography variant="caption">
+                <Typography variant="caption" sx={{ color: "aliceblue" }}>
                   {artists[albums[5].authorId].name}
                 </Typography>
-                <Typography fontWeight="bold" variant="h4">
+                <Typography
+                  fontWeight="bold"
+                  variant="h4"
+                  sx={{ color: "aliceblue" }}
+                >
                   {albums[5].name}
                 </Typography>
-                <Typography>{genres[1].name}</Typography>
+                <Typography sx={{ color: "aliceblue" }}>
+                  {genres[1].name}
+                </Typography>
               </Box>
               <Button
                 variant="contained"
@@ -125,10 +131,12 @@ const PrettyGrid = (props) => {
                     justify: "flex-end",
                   }}
                 >
-                  <Typography variant="caption">
+                  <Typography variant="caption" sx={{ color: "aliceblue" }}>
                     {artists[item.authorId].name}
                   </Typography>
-                  <Typography fontWeight="bold">{item.name}</Typography>
+                  <Typography fontWeight="bold" sx={{ color: "aliceblue" }}>
+                    {item.name}
+                  </Typography>
                 </Box>
               </Link>
             </Box>

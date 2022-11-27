@@ -1,6 +1,3 @@
-// @mui/material
-import { Box, Typography } from "@mui/material";
-
 // sito components
 import SitoContainer from "sito-container";
 
@@ -10,6 +7,7 @@ import Songs from "./Songs/Songs";
 import Artists from "./Artists/Artists";
 import Genres from "./Genres/Genres";
 import Albums from "./Albums/Albums";
+import CatchToAction from "./CatchToAction/CatchToAction";
 
 const Home = () => {
   return (
@@ -19,6 +17,7 @@ const Home = () => {
       <Artists />
       <Genres />
       <Songs />
+      <CatchToAction />
     </SitoContainer>
   );
 };
