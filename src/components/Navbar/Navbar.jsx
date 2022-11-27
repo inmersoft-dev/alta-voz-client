@@ -14,6 +14,7 @@ import {
   InputAdornment,
   IconButton,
   useTheme,
+  Divider,
 } from "@mui/material";
 
 // @mui/icons-material
@@ -57,7 +58,7 @@ const Navbar = () => {
         display: "flex",
         background: theme.palette.background.paper,
         padding: "5px 25px",
-        gap: "50%",
+        gap: "30%",
         img: {
           filter: modeState.mode === "light" ? "none" : "invert(1)",
         },
@@ -102,7 +103,7 @@ const Navbar = () => {
             endAdornment={
               <InputAdornment position="end">
                 <IconButton
-                  color="primary"
+                  color="secondary"
                   type="submit"
                   focused
                   aria-label="search"
@@ -140,6 +141,14 @@ const Navbar = () => {
             <Typography>{item.label}</Typography>
           </Link>
         ))}
+        <Button
+          size="small"
+          color="primary"
+          variant="contained"
+          sx={{ borderRadius: "25px", width: "130px" }}
+        >
+          {languageState.texts.Buttons.Login}
+        </Button>
         <IconButton
           color="inherit"
           onClick={() => setModeState({ type: "toggle" })}
@@ -147,7 +156,6 @@ const Navbar = () => {
           {modeState.mode === "light" ? <DarkModeIcon /> : <LightModeIcon />}
         </IconButton>
       </Box>
-
       <Button
         onClick={() => setShowDrawer(true)}
         variant="contained"

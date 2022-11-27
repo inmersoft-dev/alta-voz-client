@@ -108,7 +108,6 @@ const Songs = () => {
           lg: "40px 4rem 40px 4rem",
           xs: "30px 20px",
         },
-        background: theme.palette.background.paper,
       }}
     >
       <Box

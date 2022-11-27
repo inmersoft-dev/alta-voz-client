@@ -7,7 +7,7 @@ import Songs from "./Songs/Songs";
 import Artists from "./Artists/Artists";
 import Genres from "./Genres/Genres";
 import Albums from "./Albums/Albums";
-import CatchToAction from "./CatchToAction/CatchToAction";
+// import CatchToAction from "./CatchToAction/CatchToAction";
 
 const Home = () => {
   return (
@@ -17,7 +17,7 @@ const Home = () => {
       <Artists />
       <Genres />
       <Songs />
-      <CatchToAction />
+      {/* <CatchToAction /> */}
     </SitoContainer>
   );
 };

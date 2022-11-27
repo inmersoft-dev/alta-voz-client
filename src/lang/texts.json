@@ -1,7 +1,8 @@
 {
   "es": {
     "Buttons": {
-      "ListenNow": "Escuchar ahora!"
+      "ListenNow": "Escuchar ahora!",
+      "Login": "Iniciar sesión"
     },
     "NotFound": {
       "Title": "No encontramos la página que buscas",
@@ -54,6 +55,14 @@
         {
           "to": "/artists",
           "label": "Artistas"
+        },
+        {
+          "to": "/songs",
+          "label": "Canciones"
+        },
+        {
+          "to": "/genres",
+          "label": "Géneros"
         }
       ]
     }

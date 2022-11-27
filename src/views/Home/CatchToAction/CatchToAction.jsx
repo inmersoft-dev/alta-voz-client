@@ -28,31 +28,50 @@ const CatchToAction = () => {
     <Box
       sx={{
         marginTop: "40px",
-        marginRight: "-50px",
+        marginBottom: "40px",
         gap: "20px",
         display: "flex",
+        justifyContent: "space-between",
+        alignItems: "center",
         padding: {
-          xl: "20px 0 20px 0",
-          xs: "20px 0 20px 0",
+          xl: "40px 5rem 40px 5rem",
+          xs: "40px 4rem 40px 4rem",
         },
       }}
     >
-      <Box>
-        <Typography>{languageState.texts.Home.CatchToAction.Title}</Typography>
-        <Typography>
-          {languageState.texts.Home.CatchToAction.Description}
-        </Typography>
-        <Button variant="contained">
-          {languageState.texts.Home.CatchToAction.Button}
-        </Button>
+      <Box
+        sx={{
+          width: "650px",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "flex-start",
+          gap: "20px",
+        }}
+      >
+        <InViewComponent delay="0.1s">
+          <Typography variant="h3">
+            {languageState.texts.Home.CatchToAction.Title}
+          </Typography>
+        </InViewComponent>
+        <InViewComponent delay="0.3s">
+          <Typography variant="body1">
+            {languageState.texts.Home.CatchToAction.Description}
+          </Typography>
+        </InViewComponent>
+        <InViewComponent delay="0.5s">
+          <Button variant="contained" sx={{ borderRadius: "25px" }}>
+            {languageState.texts.Home.CatchToAction.Button}
+          </Button>
+        </InViewComponent>
       </Box>
       <Box>
-        <SitoImage
-          sx={{ width: "300px", height: "300px" }}
-          sx="https://xsgames.co/randomusers/assets/avatars/female
-            /300.jpg"
-          alt="person"
-        />
+        <InViewComponent delay="0.8s">
+          <SitoImage
+            sx={{ width: "300px", height: "300px", borderRadius: "100%" }}
+            src="https://xsgames.co/randomusers/assets/avatars/female/3.jpg"
+            alt="person"
+          />
+        </InViewComponent>
       </Box>
     </Box>
   );

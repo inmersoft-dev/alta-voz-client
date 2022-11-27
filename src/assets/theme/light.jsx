@@ -9,20 +9,20 @@ const light = createTheme({
       main: "#fa4e67",
       light: "#fb7185",
       dark: "#af3648",
-      contrastText: "#222",
+      contrastText: "#ffffff",
     },
     secondary: {
       main: "#f9b249",
       light: "#fac16d",
       dark: "#ae7c33",
-      contrastText: "#ffffff",
+      contrastText: "#222",
     },
     disabled: {
       dark: " #171717",
       main: "#222",
       light: "#4e4e4e",
     },
-  
+
     background: {
       default: "#fafafa",
       paper: "#f5efef",
