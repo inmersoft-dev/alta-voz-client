@@ -17,7 +17,7 @@ import noPhoto from "../../assets/images/noPhoto.png";
 const ArtistCard = (props) => {
   const theme = useTheme();
 
-  const { item } = props;
+  const { item, index } = props;
 
   return (
     <Link
@@ -33,8 +33,13 @@ const ArtistCard = (props) => {
         justifyContent="center"
       >
         <SitoImage
-          sx={{ width: "150px", height: "150px", borderRadius: "100%" }}
-          src={item.photo || noPhoto}
+          sx={{ width: "180px", height: "180px", borderRadius: "100%" }}
+          src={
+            item.photo ||
+            `https://xsgames.co/randomusers/assets/avatars/${
+              Math.floor(Math.random() * 10) % 2 === 0 ? "male" : "female"
+            }/${index}.jpg`
+          }
           alt={item.id}
         />
         <Typography sx={{ color: theme.palette.disabled.main }}>
@@ -46,6 +51,7 @@ const ArtistCard = (props) => {
 };
 
 ArtistCard.propTypes = {
+  index: PropTypes.number,
   item: PropTypes.shape({
     photo: PropTypes.string,
     id: PropTypes.string,

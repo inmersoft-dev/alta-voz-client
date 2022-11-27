@@ -1,72 +1,104 @@
+import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
+
+// @emotion/css
+import { css } from "@emotion/css";
 
 // styles
 import { styled } from "@mui/material/styles";
 
 // @mui/material
-import { Box, Paper, Grid } from "@mui/material";
+import { Box, Paper, Button, Typography } from "@mui/material";
 
-// test
-import { album, artists, genres } from "../../data/data";
+// components
 import InViewComponent from "../InViewComponent/InViewComponent";
 
-const models = { album, artists, genres };
+// contexts
+import { useLanguage } from "../../context/LanguageProvider";
 
-const Item = styled(Paper)(({ theme }) => ({
-  ...theme.typography.body2,
-  padding: theme.spacing(1),
-  textAlign: "center",
-  color: theme.palette.text.secondary,
-}));
+// images
+import noGenre from "../../assets/images/noGenre.png";
 
-const PrettyGrid = (props) => {
+// test
+import { songs, albums, artists, genres } from "../../data/data";
+
+const models = { songs, albums, artists, genres };
+
+const Grid = (props) => {
   const { model, filter, count } = props;
 
-  const splitArray = (array) => {
-    let res = [];
-    let partial = [];
-    for (let i = 0; i < array.length; i++) {
-      partial.push(array[i]);
-      if (i % 2 === 1) {
-        res.push(partial);
-        partial = [];
-      }
-    }
-    return res;
-  };
-
-  const givePosition = (i, j) => {
-    if (i % 2 === 0) {
-      if (j % 2 === 0) return 8;
-      return 4;
-    } else {
-      if (j % 2 === 0) return 4;
-      return 8;
-    }
-  };
+  const { languageState } = useLanguage();
 
   return (
-    <Box sx={{ flexGrow: 1 }}>
-      {splitArray(models[model].slice(0, count)).map((item, i) => (
-        <Grid container spacing={2} key={i}>
-          {item.map((jtem, j) => (
-            <Grid key={item.id} item xs={6} md={givePosition(i, j)}>
-              <InViewComponent delay={`0.${i + 1}s`}>
-                {console.log(i, i % 2)}
-                <Item>xs=6 md=8</Item>
-              </InViewComponent>
-            </Grid>
-          ))}
-        </Grid>
-      ))}
+    <Box
+      sx={{
+        flexGrow: 1,
+        display: "flex",
+        flexDirection: "column",
+        gap: "20px",
+      }}
+    >
+      <Box
+        sx={{ width: "100%", display: "flex", gap: "20px", flexWrap: "wrap" }}
+      >
+        {genres.slice(0, 8).map((item, i) => (
+          <InViewComponent delay={`0.${i + 2}s`} sx={{ flex: "1 1 300px" }}>
+            <Box
+              sx={{
+                height: "165px",
+                width: "100%",
+                background: `url(${item.image || noGenre})`,
+                backgroundSize: "cover",
+                backgroundRepeat: "no-repeat",
+                backgroundPosition: "center",
+                borderRadius: "15px",
+                position: "relative",
+                display: "flex",
+
+                "&:hover": {
+                  transition: "transform 500ms ease !important",
+                  transform: "translateY(-10px)",
+                },
+              }}
+            >
+              <Link
+                to={`/details?type=${model}&id=${item.id}`}
+                className={css({ color: "inherit", textDecoration: "none" })}
+              >
+                <Box
+                  sx={{
+                    width: "100%",
+                    height: "100%",
+                    borderRadius: "15px",
+                    position: "absolute",
+                    background: `${item.color}91`,
+                    padding: "20px",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                  }}
+                >
+                  <Typography
+                    fontWeight="bold"
+                    variant="h5"
+                    sx={{ color: item.fontColor }}
+                  >
+                    {item.name}
+                  </Typography>
+                </Box>
+              </Link>
+            </Box>
+          </InViewComponent>
+        ))}
+      </Box>
     </Box>
   );
 };
 
-PrettyGrid.defaultProps = {
+Grid.defaultProps = {
   count: 10,
   model: "songs",
   filter: "genres",
 };
 
-export default PrettyGrid;
+export default Grid;

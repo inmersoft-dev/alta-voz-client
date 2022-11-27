@@ -1,16 +1,15 @@
-import { useEffect, useState } from "react";
+import Slider from "react-slick";
 import { Link } from "react-router-dom";
-
-import Carousel from "react-material-ui-carousel";
 
 // @emotion/css
 import { css } from "@emotion/css";
 
 // @mui/material
-import { Box, Typography, Item } from "@mui/material";
+import { useTheme, Box, Button, Typography } from "@mui/material";
 
-// sito-components
-import SitoImage from "sito-image";
+// @mui/icons-material
+import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
+import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 
 // components
 import InViewComponent from "../../../components/InViewComponent/InViewComponent";
@@ -18,123 +17,170 @@ import InViewComponent from "../../../components/InViewComponent/InViewComponent
 // contexts
 import { useLanguage } from "../../../context/LanguageProvider";
 
-// images
-import hero from "../../../assets/images/hero";
-
 // test
-import { artists } from "../../../data/data";
+import { news } from "../../../data/data";
 
-// images
-import noPhoto from "../../../assets/images/noPhoto.png";
-import ArtistCard from "../../../components/ArtistCard/ArtistCard";
-
-// image
-import branding from "../../../assets/images/branding.jpeg";
-import sphere from "../../../assets/images/sphere.png";
-
-const Hero = () => {
+const Artists = () => {
+  const theme = useTheme();
   const { languageState } = useLanguage();
+
+  var settings = {
+    dots: false,
+    infinite: true,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    speed: 700,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    prevArrow: (
+      <Button
+        color="secondary"
+        variant="contained"
+        sx={{
+          zIndex: 20,
+          "&:before": {
+            display: "none",
+          },
+          display: "flex !important",
+          position: "fixed",
+          minWidth: 0,
+          left: "20px",
+          marginTop: "-70px",
+          width: "35px",
+          height: "35px",
+          borderRadius: "100%",
+        }}
+      >
+        <ChevronLeftIcon
+          sx={{
+            color: `${theme.palette.primary.main} !important`,
+            marginLeft: "-3px",
+          }}
+        />
+      </Button>
+    ),
+    nextArrow: (
+      <Button
+        color="secondary"
+        variant="contained"
+        sx={{
+          zIndex: 20,
+          "&:before": {
+            display: "none",
+          },
+          display: "flex !important",
+          position: "fixed",
+          right: "20px",
+          marginTop: "-70px",
+          minWidth: 0,
+          width: "35px",
+          height: "35px",
+          borderRadius: "100%",
+        }}
+      >
+        <ChevronRightIcon
+          sx={{
+            color: `${theme.palette.primary.main} !important`,
+          }}
+        />
+      </Button>
+    ),
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          arrows: false,
+          centerMode: true,
+          centerPadding: "40px",
+          slidesToShow: 3,
+        },
+      },
+    ],
+  };
 
   return (
     <Box
-      id="hero"
       sx={{
+        marginTop: "40px",
+        marginRight: "-50px",
         gap: "20px",
         display: "flex",
-        height: "calc(100vh - 80px)",
-        flexDirection: { xs: "column", md: "row" },
-        alignItems: { md: "flex-end", xs: "flex-start" },
-        justifyContent: { md: "flex-start", xs: "center" },
+        flexDirection: "column",
+        padding: {
+          xl: "20px 0 20px 0",
+          xs: "20px 0 20px 0",
+        },
       }}
     >
       <Box
         sx={{
-          width: "100%",
-          height: "100%",
-          display: "center",
-          div: { height: "100%" },
-          alignItems: "center",
-          justifyContent: "center",
-          position: "relative",
-          overflow: "hidden",
+          "&:first-child": {
+            width: "100% !important",
+            height: "250px !important",
+          },
         }}
-        id="carousel"
       >
-        <Typography>LOGO</Typography>
-        <img
-          src={sphere}
-          alt="sphere"
-          className={css({
-            position: "absolute",
-            width: "110px",
-            height: "110px",
-            top: "-50px",
-            left: "20px",
-          })}
-        />
-        <img
-          src={sphere}
-          alt="sphere"
-          className={css({
-            position: "absolute",
-            width: "500px",
-            right: "20px",
-          })}
-        />
-        <img
-          src={sphere}
-          alt="sphere"
-          className={css({
-            position: "absolute",
-            width: "750px",
-            right: "-190px",
-            bottom: "-450px",
-          })}
-        />
-
-        {/* <Carousel>
-          {Object.values(hero).map((item, i) => (
-            <Box
-              sx={{
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                gap: "30px",
-                width: "100%",
-                height: "100%",
-                backgroundImage: `url('${item}')`,
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-                backgroundRepeat: "no-repeat",
-                position: "relative",
-              }}
-              key={i}
+        <Slider {...settings}>
+          {news.slice(0, 5).map((item, i) => (
+            <Link
+              to={`/details?type=news&id=${item.id}`}
+              className={css({ color: "inherit", textDecoration: "none" })}
             >
-              <Box
-                sx={{
-                  width: "100%",
-                  height: "100%",
-                  position: "absolute",
-                  top: 0,
-                  left: 0,
-                  background: "#222222b5",
-                }}
-              />
-              {artists.slice(0, 3).map((item, i) => (
-                <InViewComponent
-                  key={item.id}
-                  delay={`0.${i + 1}s`}
-                  sx={{ height: "260px !important" }}
+              <InViewComponent key={item.id} delay={`0.${i + 1}s`}>
+                <Box
+                  sx={{
+                    borderRadius: "15px",
+                    width: "500px",
+                    height: "280px",
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                    backgroundRepeat: "repeat",
+                    background: `url('${
+                      item.photo ||
+                      `https://loremflickr.com/500/500/music/all?lock=${i}`
+                    }')`,
+                    position: "relative",
+                  }}
                 >
-                  <ArtistCard item={item} />
-                </InViewComponent>
-              ))}
-            </Box>
+                  <Box
+                    sx={{
+                      width: "100%",
+                      height: "100%",
+                      display: "flex",
+                      padding: "20px",
+                      flexDirection: "column",
+                      borderRadius: "15px",
+                      position: "absolute",
+                      background: "#00000091",
+                      justifyContent: "center",
+                      alignItems: "flex-start",
+                    }}
+                  >
+                    <Typography variant="h4">
+                      {item.title.length > 20
+                        ? `${item.title.substring(0, 20)}...`
+                        : item.title}
+                    </Typography>
+                    <Button
+                      size="small"
+                      variant="contained"
+                      sx={{
+                        borderRadius: "25px",
+                        width: "100px",
+                        marginTop: "20px",
+                      }}
+                    >
+                      {languageState.texts.Home.Hero.Button}
+                    </Button>
+                  </Box>
+                </Box>
+              </InViewComponent>
+            </Link>
           ))}
-              </Carousel> */}
+        </Slider>
       </Box>
     </Box>
   );
 };
 
-export default Hero;
+export default Artists;

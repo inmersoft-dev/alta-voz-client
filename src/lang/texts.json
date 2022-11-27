@@ -1,5 +1,8 @@
 {
   "es": {
+    "Buttons": {
+      "ListenNow": "Escuchar ahora!"
+    },
     "NotFound": {
       "Title": "No encontramos la página que buscas",
       "Subtitle": { "one": "pero...", "two": "tal vez te interese esto:" }
@@ -8,25 +11,30 @@
       "Company": "Inmersoft©",
       "Date": "2022"
     },
-    "Hero": {
-      "Title": "Noticias",
-      "Company": "Inmersoft",
-      "Description": "Accede a las noticias de todas las aplicaciones de inmersoft.",
-      "Button": "Ver Ahora"
-    },
+
     "Home": {
-      "SeeMore": "Más",
+      "Hero": {
+        "Button": "Ver Ahora"
+      },
       "Artists": {
-        "Title": "Top de artistas"
+        "Title": "Mejores artistas",
+        "Description": "La semana está bombeando con estos artistas!",
+        "SeeMore": "Ver más artistas"
       },
       "Albums": {
-        "Title": "Top de álbunes"
+        "Title": "Lo mejor de lo mejor!",
+        "Description": "Estos son los álbunes que están en tendencia",
+        "SeeMore": "Ver más álbunes"
       },
       "Songs": {
-        "Title": "Top más escuchadas"
+        "Title": "Ya escuchaste estos clips?",
+        "Description": "Mira los nuevos clips del momento",
+        "SeeMore": "Ver más clips"
       },
       "Genres": {
-        "Title": "Top de géneros"
+        "Title": "Lista de género",
+        "Description": "Escucha una lista de tú género favorito",
+        "SeeMore": "Ver más listas"
       }
     },
     "Navbar": {

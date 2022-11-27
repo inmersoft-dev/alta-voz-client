@@ -3,101 +3,826 @@ export const genres = [
     id: "1",
     name: "Música clásica",
     color: "#680e1a",
+    fontColor: "#ffffff",
   },
   {
     id: "2",
     name: "Jazz",
     color: "#0d23bd",
+    fontColor: "#ffffff",
   },
   {
     id: "3",
     name: "Blues",
     color: "#4d0f57",
+    fontColor: "#ffffff",
   },
   {
     id: "4",
     name: "Góspel",
     color: "#f49f32",
+    fontColor: "#222222",
   },
   {
     id: "5",
     name: "Soul",
     color: "#12ae72",
+    fontColor: "#222222",
   },
   {
     id: "6",
     name: "Pop",
     color: "#1c9573",
+    fontColor: "#222222",
   },
   {
     id: "7",
     name: "Rock and Roll",
     color: "#6a369d",
+    fontColor: "#ffffff",
   },
   {
     id: "8",
     name: "Country",
     color: "#e113d3",
+    fontColor: "#ffffff",
   },
   {
     id: "9",
     name: "Disco",
     color: "#bc1144",
+    fontColor: "#222222",
   },
   {
     id: "10",
     name: "Techno",
     color: "#1f64a4",
+    fontColor: "#222222",
   },
   {
     id: "11",
     name: "Reggae",
     color: "#1ce87d",
+    fontColor: "#222222",
   },
   {
     id: "12",
     name: "Salsa",
     color: "#198c1c",
+    fontColor: "#ffffff",
   },
   {
     id: "13",
     name: "Flamenco",
     color: "#d48036",
+    fontColor: "#ffffff",
   },
   {
     id: "14",
     name: "Ranchera",
     color: "#59c387",
+    fontColor: "#222222",
   },
   {
     id: "15",
     name: "Hip hop/Rap",
     color: "#532ce4",
+    fontColor: "#222222",
   },
   {
     id: "16",
     name: "Reggaetón",
     color: "#0b0164",
+    fontColor: "#ffffff",
   },
   {
     id: "17",
     name: "Metal",
     color: "#51b40a",
+    fontColor: "#ffffff",
   },
   {
     id: "18",
     name: "Funk",
     color: "#1fe56e",
+    fontColor: "#222222",
   },
   {
     id: "19",
     name: "Bossa Nova",
     color: "#837246",
+    fontColor: "#222222",
   },
   {
     id: "20",
     name: "Música melódica",
     color: "#d4a03d",
+    fontColor: "#222222",
+  },
+];
+
+export const news = [
+  {
+    id: "c58ec3f8-7ca7-4e37-ae26-1f9266fb4142",
+    title: "Lupin III: Sweet Lost Night (Rupan Sansei: Sweet Lost Night)",
+    date: "20/11/2022",
+    description:
+      "Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.\n\nIn congue. Etiam justo. Etiam pretium iaculis justo.",
+  },
+  {
+    id: "eeb04f60-2568-495b-aff6-0f1e2c08d5b9",
+    title: "Impudent Girl (L'effrontée)",
+    date: "19/04/2022",
+    description:
+      "Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.",
+  },
+  {
+    id: "cd04e544-078d-4d8d-b60f-db93124ede3a",
+    title: "Uncertainty",
+    date: "30/08/2022",
+    description:
+      "Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.\n\nMaecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.\n\nCurabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.",
+  },
+  {
+    id: "eddd5f80-ed5c-437f-8fd9-02fa8ea69821",
+    title: "Deadly Spawn, The",
+    date: "30/05/2022",
+    description:
+      "Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.\n\nEtiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.",
+  },
+  {
+    id: "7425d295-ef1b-4cdc-b6be-4448bd3654b2",
+    title: "Lawrence of Arabia",
+    date: "06/07/2022",
+    description:
+      "Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.",
+  },
+  {
+    id: "3a5fa3a0-d7e7-4206-81bf-2eb1471eb377",
+    title: "Frances Ha",
+    date: "08/11/2022",
+    description:
+      "Integer ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.\n\nNam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.\n\nCurabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.",
+  },
+  {
+    id: "82c7ab7a-66be-4a0d-a7ce-18f9a71cc1f7",
+    title: "Already Dead",
+    date: "14/02/2022",
+    description:
+      "Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.\n\nMauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.\n\nNullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.",
+  },
+  {
+    id: "1783bed5-69dc-48e0-aed9-71bb3a33fbbb",
+    title: "Dragonfly",
+    date: "04/10/2022",
+    description:
+      "Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.",
+  },
+  {
+    id: "b13c6fde-8958-42a6-8491-f352ac9b1443",
+    title: "Walk the Line",
+    date: "24/08/2022",
+    description:
+      "Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.",
+  },
+  {
+    id: "17845828-b228-46a3-b6e0-547338990e82",
+    title: "Z.P.G.",
+    date: "28/02/2022",
+    description:
+      "Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.",
+  },
+  {
+    id: "407b983a-8cfe-45f0-8e0c-e3df1aaa3be1",
+    title: "Closed Circuit",
+    date: "28/10/2022",
+    description:
+      "Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.\n\nDuis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.\n\nDonec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.",
+  },
+  {
+    id: "6b1b0209-b548-4e2f-ab61-66da29cc2707",
+    title: "Guyana Tragedy: The Story of Jim Jones",
+    date: "30/06/2022",
+    description:
+      "Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.\n\nMorbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.\n\nFusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.",
+  },
+  {
+    id: "5ef60f61-0001-4c83-b112-21e646418379",
+    title: "Baxter, The",
+    date: "11/05/2022",
+    description:
+      "Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus.\n\nPhasellus in felis. Donec semper sapien a libero. Nam dui.",
+  },
+  {
+    id: "74e53744-c2e3-4aae-96f7-b5ba56e6c961",
+    title: "Ticking Clock",
+    date: "25/06/2022",
+    description:
+      "Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.",
+  },
+  {
+    id: "b55a6c1e-3fef-440b-9bb2-fb2e4ce7c642",
+    title:
+      "Importance of Tying Your Own Shoes, The (Hur många lingon finns det i världen?)",
+    date: "01/11/2022",
+    description:
+      "Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.\n\nIn congue. Etiam justo. Etiam pretium iaculis justo.\n\nIn hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.",
+  },
+  {
+    id: "6834ff01-77ed-45dc-be0b-f24a44dc21d9",
+    title: "13 Beloved (13 game sayawng)",
+    date: "10/01/2022",
+    description:
+      "Aenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.\n\nQuisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.\n\nVestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.",
+  },
+  {
+    id: "7efa690f-dfc0-41b3-b401-ce09458431f4",
+    title: "Story of Me, The (O contador de histórias)",
+    date: "20/05/2022",
+    description:
+      "Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.\n\nSed ante. Vivamus tortor. Duis mattis egestas metus.\n\nAenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.",
+  },
+  {
+    id: "b4741c5a-32e2-423a-8fab-0607fa92b5d3",
+    title: "Simple-Minded Murder, The (Enfaldige mördaren, Den)",
+    date: "06/01/2022",
+    description:
+      "Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.",
+  },
+  {
+    id: "ef39eb58-938f-47ae-bfd3-8e06c3115ba7",
+    title: "War at Home, The",
+    date: "18/09/2022",
+    description:
+      "Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.",
+  },
+  {
+    id: "f62c2742-0a6a-4c88-b613-a4206611ec51",
+    title: "And Soon the Darkness",
+    date: "20/08/2022",
+    description:
+      "Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.\n\nCurabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.\n\nPhasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.",
+  },
+  {
+    id: "35477e08-3658-4c85-b594-0a009b033d63",
+    title: "Cry in the Night, A",
+    date: "14/04/2022",
+    description:
+      "Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.\n\nDuis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.\n\nDonec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.",
+  },
+  {
+    id: "d40aa99d-1718-4220-bffe-65ca486aa36e",
+    title: "Exit Wounds",
+    date: "24/11/2022",
+    description:
+      "Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.\n\nFusce consequat. Nulla nisl. Nunc nisl.\n\nDuis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.",
+  },
+  {
+    id: "af85764a-897d-427e-97a6-dc37703d272a",
+    title: "Margaret Cho: Assassin",
+    date: "06/04/2022",
+    description:
+      "Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.\n\nIn sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.\n\nSuspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.",
+  },
+  {
+    id: "897d7599-b863-4651-8eb9-64a6dbd1efc4",
+    title: "Ugly Duckling and Me!, The",
+    date: "23/01/2022",
+    description:
+      "Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.",
+  },
+  {
+    id: "24d82548-582c-4c4f-bfd6-06026c87267e",
+    title: "Dangerous Man, A",
+    date: "21/03/2022",
+    description:
+      "Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.",
+  },
+  {
+    id: "a942f6f5-e940-4292-91c3-523865cf95ec",
+    title: "Librarian, The: The Curse of the Judas Chalice",
+    date: "08/11/2022",
+    description:
+      "Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.\n\nSed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.\n\nPellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.",
+  },
+  {
+    id: "1b34667b-f4e4-433b-b660-fb98f511a069",
+    title: "Play House, The",
+    date: "24/11/2022",
+    description:
+      "Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.\n\nMauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.",
+  },
+  {
+    id: "e5b529a9-24a8-484b-8949-8726b8ae6f47",
+    title: "Hollow Man",
+    date: "05/12/2021",
+    description:
+      "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.\n\nNullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.",
+  },
+  {
+    id: "61e8ed23-4663-434e-b136-327dddb28394",
+    title: "Kidnapping of the President, The",
+    date: "03/06/2022",
+    description:
+      "Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.\n\nProin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.\n\nDuis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.",
+  },
+  {
+    id: "b014f98e-5311-4bd0-ac08-fc6473c7ad87",
+    title: "Just Like Us",
+    date: "20/01/2022",
+    description:
+      "In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.",
+  },
+  {
+    id: "b9a3bad0-1727-4e68-bbc6-1aa3b6f3692d",
+    title: "Return to Oz",
+    date: "24/02/2022",
+    description:
+      "Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.\n\nSed ante. Vivamus tortor. Duis mattis egestas metus.\n\nAenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.",
+  },
+  {
+    id: "0350d824-6b57-4ab5-bdf6-cfd569f26cca",
+    title: "Harvest Month, The (Elokuu)",
+    date: "07/05/2022",
+    description:
+      "Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.",
+  },
+  {
+    id: "85db040d-d7ca-4245-bd58-7c1e65594afd",
+    title: "Tremors",
+    date: "04/07/2022",
+    description:
+      "Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.",
+  },
+  {
+    id: "181264a7-c477-4732-87e9-0404c5407232",
+    title: "Miracle Run",
+    date: "13/05/2022",
+    description:
+      "Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.\n\nAenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.\n\nCurabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.",
+  },
+  {
+    id: "8e2b1624-54d4-4e8a-95fa-3de5ce5bf862",
+    title: "Only God Forgives",
+    date: "13/06/2022",
+    description:
+      "In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.",
+  },
+  {
+    id: "6156cdc8-dcda-4777-8d26-b9affa2fd7e2",
+    title: "Urban Justice",
+    date: "16/06/2022",
+    description:
+      "Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.\n\nDuis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.",
+  },
+  {
+    id: "35b36947-3b9c-4aac-b9e9-13b11f3d4c47",
+    title: "Falcon Rising",
+    date: "02/06/2022",
+    description:
+      "Phasellus in felis. Donec semper sapien a libero. Nam dui.\n\nProin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius.\n\nInteger ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.",
+  },
+  {
+    id: "011b84ba-dd14-4a75-9703-332e43bfc053",
+    title:
+      "I Always Wanted to Be a Gangster (J'ai toujours rêvé d'être un gangster)",
+    date: "16/05/2022",
+    description:
+      "Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.\n\nCurabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.",
+  },
+  {
+    id: "0e0c8e8c-47c9-4fb8-839b-bcbf9a83f4ac",
+    title: "Tepenin Ardi",
+    date: "14/03/2022",
+    description:
+      "Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.\n\nCurabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.",
+  },
+  {
+    id: "2e482096-53ab-45e8-bb48-00c2b74e6aad",
+    title: "Tarzan the Fearless",
+    date: "02/06/2022",
+    description:
+      "Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.\n\nPellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.",
+  },
+  {
+    id: "a26db09f-062d-47fd-8f36-f5a093573620",
+    title: "Grave Secrets (Silent Screams)",
+    date: "21/04/2022",
+    description:
+      "Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.\n\nIn hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.\n\nAliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.",
+  },
+  {
+    id: "e520e5c3-698d-44e1-8456-d81da24bcdd7",
+    title: "Summer Things (Embrassez qui vous voudrez)",
+    date: "18/02/2022",
+    description:
+      "Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.\n\nEtiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.",
+  },
+  {
+    id: "398a0ca1-400b-4c78-9d11-6937626dcaa2",
+    title: "In Search of a Midnight Kiss",
+    date: "05/12/2021",
+    description:
+      "Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.",
+  },
+  {
+    id: "9ef5d314-3238-44d4-8fe0-1ba4e24a90b4",
+    title: "Average Little Man, An (Un borghese piccolo piccolo)",
+    date: "11/09/2022",
+    description:
+      "In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.\n\nMaecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.",
+  },
+  {
+    id: "66686cea-4f9c-4b4c-a85d-5235ad0e8491",
+    title: "Big Clock, The",
+    date: "24/11/2022",
+    description:
+      "Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.\n\nMauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.",
+  },
+  {
+    id: "766053f9-458c-4579-be63-42e02189160e",
+    title: "Sex Up Your Life!",
+    date: "12/12/2021",
+    description:
+      "Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.\n\nIn sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.\n\nSuspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.",
+  },
+  {
+    id: "5c251203-17f5-4ed6-a759-81b998c42989",
+    title: "Anna",
+    date: "26/06/2022",
+    description:
+      "Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.",
+  },
+  {
+    id: "5e94c837-7261-4713-bc92-00bdb4b86b2c",
+    title: "Mother (Madeo)",
+    date: "13/11/2022",
+    description:
+      "Phasellus in felis. Donec semper sapien a libero. Nam dui.\n\nProin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius.",
+  },
+  {
+    id: "eb29c227-73e7-4690-98d1-f57968c88500",
+    title: "Student of the Year",
+    date: "07/07/2022",
+    description:
+      "Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.\n\nInteger tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.",
+  },
+  {
+    id: "c23e511a-52c2-48ff-9e10-27190e1fb02d",
+    title: "Red Army",
+    date: "21/03/2022",
+    description:
+      "Aenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.",
+  },
+  {
+    id: "2ecc9beb-f24f-4439-9cc1-26a944cf64a6",
+    title: "Everybody Dies But Me",
+    date: "20/02/2022",
+    description:
+      "In congue. Etiam justo. Etiam pretium iaculis justo.\n\nIn hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.",
+  },
+  {
+    id: "35fce7db-18ab-488e-bb3b-45f4d8bbb509",
+    title: "Stolen Face",
+    date: "01/09/2022",
+    description:
+      "In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.\n\nNulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.",
+  },
+  {
+    id: "2ab52969-ff2c-41b2-9df8-6c9e31e018d5",
+    title: "Loop the Loop (Up and Down) (Horem pádem)",
+    date: "12/05/2022",
+    description:
+      "In congue. Etiam justo. Etiam pretium iaculis justo.\n\nIn hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.",
+  },
+  {
+    id: "f1cf2e3b-eaea-45bc-9f2b-bc8a5fc97e21",
+    title: "Reality Bites",
+    date: "26/02/2022",
+    description:
+      "Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.",
+  },
+  {
+    id: "e6c0884d-508c-45ee-b97c-624094552a1a",
+    title: "Breaking Point",
+    date: "16/11/2022",
+    description:
+      "Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.",
+  },
+  {
+    id: "3722ec79-35b2-4fbd-beca-342d5a31ba4a",
+    title: "Oliver!",
+    date: "12/05/2022",
+    description:
+      "In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.\n\nMaecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.",
+  },
+  {
+    id: "597008a8-c649-4160-87ab-18f9cb3332f2",
+    title: "Barenaked in America",
+    date: "19/10/2022",
+    description:
+      "Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.",
+  },
+  {
+    id: "5c80f2c0-a5a9-4ced-a5d7-7aa4ab040126",
+    title: "Backlight",
+    date: "10/01/2022",
+    description:
+      "Sed ante. Vivamus tortor. Duis mattis egestas metus.\n\nAenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.\n\nQuisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.",
+  },
+  {
+    id: "797e88d3-2c93-4450-a645-bff0c5f4678b",
+    title: "Babysitter Wanted",
+    date: "24/10/2022",
+    description:
+      "Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.\n\nPhasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.",
+  },
+  {
+    id: "593ad577-37b1-443c-9a44-f63767d22f5d",
+    title: "Happiness",
+    date: "04/11/2022",
+    description:
+      "Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.",
+  },
+  {
+    id: "49ec1113-a067-4f9f-876d-156f0baa5f6f",
+    title: "Friday the 13th",
+    date: "20/09/2022",
+    description:
+      "Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.\n\nCras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.",
+  },
+  {
+    id: "93c62bde-7728-4394-b739-580623d7fe97",
+    title: "Prison (Fängelse) ",
+    date: "13/12/2021",
+    description:
+      "Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.\n\nIn hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.\n\nAliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.",
+  },
+  {
+    id: "eff5d898-ebf1-4555-b32b-d53f579f76a8",
+    title: "Better Off Dead...",
+    date: "08/10/2022",
+    description:
+      "Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.\n\nIn sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.",
+  },
+  {
+    id: "441abd13-7b38-430e-978d-dbc5241e88c1",
+    title: "Police Academy 6: City Under Siege",
+    date: "02/12/2021",
+    description:
+      "Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.\n\nSed ante. Vivamus tortor. Duis mattis egestas metus.",
+  },
+  {
+    id: "be46b779-54ec-4eb3-bb1f-1546dc3c0c4c",
+    title: "Our Man in Havana",
+    date: "19/08/2022",
+    description:
+      "Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.",
+  },
+  {
+    id: "6947d360-3bfa-4925-ac58-7e087254dcf3",
+    title: "Norte, El",
+    date: "29/10/2022",
+    description:
+      "Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.\n\nFusce consequat. Nulla nisl. Nunc nisl.",
+  },
+  {
+    id: "07036313-f52e-4f6d-8636-f412d3694569",
+    title: "Standing Still",
+    date: "28/06/2022",
+    description:
+      "Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.\n\nPraesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.",
+  },
+  {
+    id: "f15fa897-b236-477b-bb42-0d6dd52e6385",
+    title: "Edge of Tomorrow",
+    date: "16/03/2022",
+    description:
+      "Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.\n\nProin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.\n\nAenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.",
+  },
+  {
+    id: "854cd8d5-1483-4f25-bbcd-752dce7f1e03",
+    title: "Safety Patrol",
+    date: "17/04/2022",
+    description:
+      "In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.\n\nSuspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.",
+  },
+  {
+    id: "dc18c1ed-38ee-4321-88c9-facd6d15efa9",
+    title: "J. Edgar",
+    date: "05/09/2022",
+    description:
+      "Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.\n\nCurabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.",
+  },
+  {
+    id: "b1381fda-aa9e-4a58-be26-f81f6f5b5bfa",
+    title: "I Wish (Kiseki)",
+    date: "25/08/2022",
+    description:
+      "Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.\n\nMaecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.\n\nCurabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.",
+  },
+  {
+    id: "6afeeaab-be36-4123-8ae8-e7c6e0ffd467",
+    title: "Brubaker",
+    date: "10/02/2022",
+    description:
+      "Phasellus in felis. Donec semper sapien a libero. Nam dui.\n\nProin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius.",
+  },
+  {
+    id: "6896deb8-c96a-4c8a-946a-98bb3f0a8936",
+    title: "Tooth Fairy 2",
+    date: "17/08/2022",
+    description:
+      "Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.\n\nPellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.",
+  },
+  {
+    id: "b3fd57ae-6827-4334-a5c9-8dab42b34a43",
+    title: "Once Upon a Time in America",
+    date: "23/05/2022",
+    description:
+      "Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.\n\nMorbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.",
+  },
+  {
+    id: "f65827a9-c688-4433-90a8-9c84cc7052a6",
+    title: "Ready to Rumble",
+    date: "19/10/2022",
+    description:
+      "Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.\n\nPellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.\n\nCum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+  },
+  {
+    id: "6ea39ad3-deb3-40da-afce-ee62969c7c2d",
+    title: "24th Day, The",
+    date: "16/01/2022",
+    description:
+      "Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.\n\nSed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.\n\nPellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.",
+  },
+  {
+    id: "7f94afa7-c4f4-4224-8a2d-33f2d0b79f78",
+    title: "Seeking Asian Female",
+    date: "15/09/2022",
+    description:
+      "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.\n\nNullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.\n\nMorbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.",
+  },
+  {
+    id: "63bac0ff-e15e-4cee-875f-26edf75c81e1",
+    title: "When Evening Falls on Bucharest or Metabolism",
+    date: "15/08/2022",
+    description:
+      "Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.\n\nCras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.\n\nProin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.",
+  },
+  {
+    id: "e0478b07-a478-410b-a99f-80a0ae5a483e",
+    title: "Rembrandt",
+    date: "19/12/2021",
+    description:
+      "Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.\n\nDuis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.",
+  },
+  {
+    id: "27635af6-44b1-4d3c-affd-7c8ce6a0ca2a",
+    title: "Transamerica",
+    date: "25/07/2022",
+    description:
+      "In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.\n\nNulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.\n\nCras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.",
+  },
+  {
+    id: "59eb88d0-3dea-45b7-9b2a-c6e8c610a880",
+    title: "Geek Charming",
+    date: "18/05/2022",
+    description:
+      "Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.",
+  },
+  {
+    id: "635d8643-3686-4d16-b108-22ea40a4a26f",
+    title: "Better Off Dead...",
+    date: "13/07/2022",
+    description:
+      "Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.\n\nDonec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.\n\nDuis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.",
+  },
+  {
+    id: "f6b282f9-35ab-4fa3-af33-88029b6cdc4a",
+    title: "Love Story",
+    date: "17/12/2021",
+    description:
+      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus. Praesent lectus.\n\nVestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.",
+  },
+  {
+    id: "06231280-1c5d-41bf-983b-fb0a86b1fb64",
+    title: "Secret Garden, The",
+    date: "09/05/2022",
+    description:
+      "Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.",
+  },
+  {
+    id: "5a0f2ee6-f588-4244-b424-6c87a8ecf106",
+    title: "The Hallelujah Handshake",
+    date: "10/02/2022",
+    description:
+      "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.\n\nNullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.",
+  },
+  {
+    id: "788c8d99-52ba-4be7-b63b-bacbc16a2886",
+    title: "Strange Little Cat, The (Das merkwürdige Kätzchen)",
+    date: "02/03/2022",
+    description:
+      "Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.\n\nSed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.",
+  },
+  {
+    id: "3bdc4c3c-f596-484f-9c28-fef47c7543ea",
+    title: "Kind of Loving, A",
+    date: "21/02/2022",
+    description:
+      "Phasellus in felis. Donec semper sapien a libero. Nam dui.\n\nProin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius.",
+  },
+  {
+    id: "6e4520e9-fda3-4a2b-b941-f1d437716c47",
+    title: "Brubaker",
+    date: "02/11/2022",
+    description:
+      "Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus.",
+  },
+  {
+    id: "73f8f2be-a5a4-47f1-9c47-16a52cc79126",
+    title: "Ju-on: The Grudge 2",
+    date: "08/03/2022",
+    description:
+      "Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.\n\nProin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.\n\nAenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.",
+  },
+  {
+    id: "4f33100b-1670-4571-8541-5d5e433f16fe",
+    title: "D.O.A.",
+    date: "24/07/2022",
+    description:
+      "Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.",
+  },
+  {
+    id: "0f6d53e6-8346-4a98-8576-5937102f51fe",
+    title: "Red Beret, The",
+    date: "18/08/2022",
+    description:
+      "Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.\n\nCurabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.",
+  },
+  {
+    id: "90c4fea3-c34b-4aaf-a91a-205a7c85e415",
+    title: "Syrian Bride, The",
+    date: "25/03/2022",
+    description:
+      "Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.\n\nProin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.\n\nDuis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.",
+  },
+  {
+    id: "6482a3f4-e0af-43b0-bc31-93d63ea8b98d",
+    title: "Late Night Shopping",
+    date: "18/02/2022",
+    description:
+      "Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.\n\nMaecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.",
+  },
+  {
+    id: "61332ed8-d420-4173-b17d-95201790ca8c",
+    title: "Tales of Terror (Kaidan Shin Mimibukuro)",
+    date: "23/05/2022",
+    description:
+      "Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.",
+  },
+  {
+    id: "04cda533-5138-4d09-b533-6054d92c24f8",
+    title: "Felony",
+    date: "15/01/2022",
+    description:
+      "Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.\n\nMorbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.\n\nFusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.",
+  },
+  {
+    id: "b9ea844b-6a0f-479d-bda3-4d91dbda7530",
+    title: "Welcome to Sarajevo",
+    date: "16/12/2021",
+    description:
+      "Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.\n\nAenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.",
+  },
+  {
+    id: "e4774c1a-6eca-4986-a776-268c8c436bb3",
+    title: "Crime Story (Zhong an zu)",
+    date: "13/03/2022",
+    description:
+      "Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
+  },
+  {
+    id: "3577fde5-aea8-4c95-a834-05f01de8a86a",
+    title: "Fever Pitch",
+    date: "31/10/2022",
+    description:
+      "Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.",
+  },
+  {
+    id: "886eba63-6e41-42b8-98b5-b0fca013eeca",
+    title: "TPB AFK: The Pirate Bay Away from Keyboard",
+    date: "16/01/2022",
+    description:
+      "Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.\n\nIn sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.",
+  },
+  {
+    id: "31e0ef8a-46b0-43b6-812a-545590aa33d8",
+    title: "Man in the White Suit, The",
+    date: "26/04/2022",
+    description:
+      "Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.\n\nAenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.",
   },
 ];
 

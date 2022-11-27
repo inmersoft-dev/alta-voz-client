@@ -96,7 +96,7 @@ const Artists = () => {
   return (
     <Box
       sx={{
-        marginTop: "20px",
+        marginTop: "40px",
         gap: "20px",
         display: "flex",
         flexDirection: "column",
@@ -107,19 +107,17 @@ const Artists = () => {
         },
       }}
     >
-      <Box
-        sx={{
-          width: "100%",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-between",
-        }}
-      >
-        <Typography variant="h4" sx={{ marginBottom: "20px" }}>
-          {languageState.texts.Home.Artists.Title}
-        </Typography>
+      <Box display="flex" alignItems="center" justifyContent="space-between">
+        <Box>
+          <Typography variant="h4" sx={{ marginBottom: "5px" }}>
+            {languageState.texts.Home.Artists.Title}
+          </Typography>
+          <Typography sx={{ marginBottom: "20px" }}>
+            {languageState.texts.Home.Artists.Description}
+          </Typography>
+        </Box>
         <Link to="/artists" className={css({ textDecoration: "none" })}>
-          <Button>{languageState.texts.Home.SeeMore}</Button>
+          <Button>{languageState.texts.Home.Artists.SeeMore}</Button>
         </Link>
       </Box>
       <Box
@@ -133,7 +131,7 @@ const Artists = () => {
         <Slider {...settings}>
           {artists.slice(0, 18).map((item, i) => (
             <InViewComponent key={item.id} delay={`0.${i + 1}s`}>
-              <ArtistCard item={item} />
+              <ArtistCard item={item} index={i} />
             </InViewComponent>
           ))}
         </Slider>

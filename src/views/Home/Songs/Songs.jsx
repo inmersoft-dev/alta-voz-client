@@ -31,8 +31,8 @@ const Songs = () => {
     speed: 1000,
     autoplay: true,
     autoplaySpeed: 2000,
-    slidesToShow: 7,
-    slidesToScroll: 7,
+    slidesToShow: 6,
+    slidesToScroll: 6,
     prevArrow: (
       <Button
         color="primary"
@@ -98,7 +98,8 @@ const Songs = () => {
   return (
     <Box
       sx={{
-        marginTop: "100px",
+        marginTop: "40px",
+        marginBottom: "100px",
         gap: "20px",
         display: "flex",
         flexDirection: "column",
@@ -135,7 +136,7 @@ const Songs = () => {
         <Slider {...settings}>
           {songs.slice(0, 18).map((item, i) => (
             <InViewComponent key={item.id} delay={`0.${i + 1}s`}>
-              <SongCard item={item} />
+              <SongCard item={item} index={i} />
             </InViewComponent>
           ))}
         </Slider>
