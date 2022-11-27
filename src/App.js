@@ -34,6 +34,7 @@ const App = () => {
   const { modeState } = useMode();
 
   useEffect(() => {
+    document.body.style.overflowX = "hidden";
     document.body.style.transition = "all 200ms ease";
   }, []);
 

@@ -9,7 +9,6 @@ import Hero from "./Hero/Hero";
 import Songs from "./Songs/Songs";
 import Artists from "./Artists/Artists";
 import Genres from "./Genres/Genres";
-import PrettyGrid from "../../components/Grid/PrettyGrid";
 import Albums from "./Albums/Albums";
 
 const Home = () => {
