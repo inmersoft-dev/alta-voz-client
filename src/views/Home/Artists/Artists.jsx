@@ -101,9 +101,9 @@ const Artists = () => {
         display: "flex",
         flexDirection: "column",
         padding: {
-          xl: "40px 5rem 40px 5rem",
-          lg: "40px 4rem 40px 4rem",
-          xs: "30px 20px",
+          xl: "60px 5rem 60px 5rem",
+          lg: "60px 4rem 60px 4rem",
+          xs: "40px 20px",
         },
         background: theme.palette.background.paper,
       }}
