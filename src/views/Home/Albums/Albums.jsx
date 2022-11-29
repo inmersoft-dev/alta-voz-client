@@ -18,7 +18,7 @@ const Albums = () => {
   return (
     <Box
       sx={{
-        marginTop: "100px",
+        marginTop: "50px",
         gap: "20px",
         display: "flex",
         flexDirection: "column",
@@ -30,16 +30,14 @@ const Albums = () => {
       }}
     >
       <Box display="flex" alignItems="center" justifyContent="space-between">
-        <Box>
-          <Typography variant="h4" sx={{ marginBottom: "20px" }}>
-            {languageState.texts.Home.Albums.Title}
-          </Typography>
-        </Box>
+        <Typography variant="h4" sx={{ marginBottom: 0 }}>
+          {languageState.texts.Home.Albums.Title}
+        </Typography>
         <Link to="/artists" className={css({ textDecoration: "none" })}>
           <Button>{languageState.texts.Home.Albums.SeeMore}</Button>
         </Link>
       </Box>
-      <PrettyGrid model="albums" component="album"  />
+      <PrettyGrid model="albums" component="album" />
     </Box>
   );
 };

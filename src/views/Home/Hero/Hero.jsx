@@ -99,7 +99,6 @@ const Artists = () => {
   return (
     <Box
       sx={{
-        marginTop: "20px",
         marginRight: "-50px",
         gap: "20px",
         display: "flex",
@@ -120,7 +119,7 @@ const Artists = () => {
       >
         <Box
           sx={{
-            marginBottom: "40px",
+            marginBottom: "20px",
             padding: {
               xl: "0 5rem 0 5rem",
               lg: "0 4rem 0 4rem",
@@ -128,7 +127,7 @@ const Artists = () => {
             },
           }}
         >
-          <Typography variant="h4" sx={{ marginBottom: "5px" }}>
+          <Typography variant="h4">
             {languageState.texts.Home.Hero.Title}
           </Typography>
         </Box>

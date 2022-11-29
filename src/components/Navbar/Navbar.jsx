@@ -14,7 +14,6 @@ import {
   InputAdornment,
   IconButton,
   useTheme,
-  Divider,
 } from "@mui/material";
 
 // @mui/icons-material
@@ -34,7 +33,7 @@ import { useMode } from "../../context/ModeProvider";
 import { useLanguage } from "../../context/LanguageProvider";
 
 // images
-// import logoHorizontal from "../../assets/images/logo-horizontal.png";
+import logo from "../../assets/images/logo.png";
 
 const Navbar = () => {
   const theme = useTheme();
@@ -58,10 +57,7 @@ const Navbar = () => {
         display: "flex",
         background: theme.palette.background.paper,
         padding: "5px 25px",
-        gap: "30%",
-        img: {
-          filter: modeState.mode === "light" ? "none" : "invert(1)",
-        },
+        gap: "10%",
       }}
     >
       <Box display="flex" alignItems="center" gap="30px" flex={1}>
@@ -72,16 +68,14 @@ const Navbar = () => {
             textDecoration: "none",
           })}
         >
-          LOGO
-          {/* <SitoImage
-          src={logoHorizontal}
-          alt="logo"
-          sx={{
-            width: "200px",
-            height: "55px",
-            filter: "grayscale(1)",
-          }}
-        /> */}
+          <SitoImage
+            src={logo}
+            alt="logo"
+            sx={{
+              width: "80px",
+              height: "30px",
+            }}
+          />
         </Link>
         <FormControl
           sx={{

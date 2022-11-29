@@ -22,15 +22,15 @@ const Concerts = () => {
         display: "flex",
         flexDirection: "column",
         padding: {
-          xl: "40px 5rem 40px 5rem",
-          lg: "40px 4rem 40px 4rem",
+          xl: "0px 5rem 40px 5rem",
+          lg: "0px 4rem 40px 4rem",
           xs: "30px 20px",
         },
       }}
     >
       <Box display="flex" alignItems="center" justifyContent="space-between">
         <Box>
-          <Typography variant="h4" sx={{ marginBottom: "20px" }}>
+          <Typography variant="h4">
             {languageState.texts.Home.Concerts.Title}
           </Typography>
         </Box>

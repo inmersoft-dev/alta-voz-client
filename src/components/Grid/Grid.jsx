@@ -1,33 +1,18 @@
-import { Link } from "react-router-dom";
-import PropTypes from "prop-types";
-
-// @emotion/css
-import { css } from "@emotion/css";
-
-// styles
-import { styled } from "@mui/material/styles";
-
 // @mui/material
-import { Box, Paper, Button, Typography } from "@mui/material";
+import { useTheme, Box } from "@mui/material";
 
 // components
 import InViewComponent from "../InViewComponent/InViewComponent";
 
-// contexts
-import { useLanguage } from "../../context/LanguageProvider";
-
-// images
-import noGenre from "../../assets/images/noGenre.png";
-
 // test
 import { songs, albums, artists, genres } from "../../data/data";
+import SongCard from "../SongCard/SongCard";
 
 const models = { songs, albums, artists, genres };
 
 const Grid = (props) => {
+  const theme = useTheme();
   const { model, filter, count } = props;
-
-  const { languageState } = useLanguage();
 
   return (
     <Box
@@ -39,55 +24,11 @@ const Grid = (props) => {
       }}
     >
       <Box
-        sx={{ width: "100%", display: "flex", gap: "20px", flexWrap: "wrap" }}
+        sx={{ width: "100%", display: "flex", gap: "40px", flexWrap: "wrap" }}
       >
-        {genres.slice(0, 8).map((item, i) => (
-          <InViewComponent delay={`0.${i + 2}s`} sx={{ flex: "1 1 300px" }}>
-            <Box
-              sx={{
-                height: "165px",
-                width: "100%",
-                background: `url(${item.image || noGenre})`,
-                backgroundSize: "cover",
-                backgroundRepeat: "no-repeat",
-                backgroundPosition: "center",
-                borderRadius: "15px",
-                position: "relative",
-                display: "flex",
-
-                "&:hover": {
-                  transition: "transform 500ms ease !important",
-                  transform: "translateY(-10px)",
-                },
-              }}
-            >
-              <Link
-                to={`/details?type=${model}&id=${item.id}`}
-                className={css({ color: "inherit", textDecoration: "none" })}
-              >
-                <Box
-                  sx={{
-                    width: "100%",
-                    height: "100%",
-                    borderRadius: "15px",
-                    position: "absolute",
-                    background: `${item.color}91`,
-                    padding: "20px",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                  }}
-                >
-                  <Typography
-                    fontWeight="bold"
-                    variant="h5"
-                    sx={{ color: item.fontColor }}
-                  >
-                    {item.name}
-                  </Typography>
-                </Box>
-              </Link>
-            </Box>
+        {songs.slice(9, 19).map((item, i) => (
+          <InViewComponent delay={`0.${i + 2}s`} sx={{ flex: "1 1 250px" }}>
+            <SongCard item={item} index={i} />
           </InViewComponent>
         ))}
       </Box>

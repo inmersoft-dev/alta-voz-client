@@ -31,6 +31,10 @@
         "Title": "Nuevos lanzamientos de álbumes",
         "SeeMore": "Ver más álbunes"
       },
+      "Events": {
+        "Title": "Próximos eventos",
+        "SeeMore": "Ver más eventos"
+      },
       "Concerts": {
         "Title": "Próximos conciertos online ",
         "SeeMore": "Ver más conciertos"
@@ -54,16 +58,28 @@
           "label": "Inicio"
         },
         {
+          "to": "/streaming",
+          "label": "Streaming"
+        },
+        {
+          "to": "/news",
+          "label": "Noticias"
+        },
+        {
+          "to": "/concerts",
+          "label": "Conciertos"
+        },
+        {
           "to": "/artists",
           "label": "Artistas"
         },
         {
-          "to": "/songs",
-          "label": "Canciones"
+          "to": "/community",
+          "label": "Comunidad"
         },
         {
-          "to": "/genres",
-          "label": "Géneros"
+          "to": "/store",
+          "label": "Tienda"
         }
       ]
     }

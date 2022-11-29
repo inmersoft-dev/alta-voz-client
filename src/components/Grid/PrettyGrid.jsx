@@ -3,13 +3,14 @@ import { Box } from "@mui/material";
 
 // components
 import AlbumCard from "../AlbumCard/AlbumCard";
+import EventCard from "../EventCard/EventCard";
 import ConcertCard from "../ConcertCard/ConcertCard";
 import InViewComponent from "../InViewComponent/InViewComponent";
 
 // test
-import { albums, artists, genres, concerts } from "../../data/data";
+import { albums, artists, genres, concerts, events } from "../../data/data";
 
-const models = { albums, artists, genres, concerts };
+const models = { albums, artists, genres, concerts, events };
 
 const PrettyGrid = (props) => {
   const { model, component, filter, count } = props;
@@ -23,16 +24,21 @@ const PrettyGrid = (props) => {
         gap: "20px",
       }}
     >
-      <Box sx={{ width: "100%", display: "flex", gap: "20px" }}>
-        {models[model].slice(0, 4).map((item, i) => (
-          <InViewComponent delay={`0.${i + 2}s`} sx={{ width: "100%" }}>
-            {component === "album" ? <AlbumCard item={item} /> : null}
-            {component === "concert" ? (
-              <ConcertCard item={item} index={i} />
-            ) : null}
-          </InViewComponent>
-        ))}
-      </Box>
+      {
+        <Box sx={{ width: "100%", display: "flex", gap: "20px" }}>
+          {models[model].slice(0, 4).map((item, i) => (
+            <InViewComponent delay={`0.${i + 2}s`} sx={{ width: "100%" }}>
+              {component === "album" ? <AlbumCard item={item} /> : null}
+              {component === "concert" ? (
+                <ConcertCard item={item} index={i} />
+              ) : null}
+              {component === "event" ? (
+                <EventCard item={item} index={i} />
+              ) : null}
+            </InViewComponent>
+          ))}
+        </Box>
+      }
     </Box>
   );
 };
