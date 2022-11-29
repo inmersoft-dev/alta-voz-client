@@ -99,7 +99,7 @@ const Artists = () => {
   return (
     <Box
       sx={{
-        marginTop: "40px",
+        marginTop: "20px",
         marginRight: "-50px",
         gap: "20px",
         display: "flex",
@@ -118,6 +118,20 @@ const Artists = () => {
           },
         }}
       >
+        <Box
+          sx={{
+            marginBottom: "40px",
+            padding: {
+              xl: "0 5rem 0 5rem",
+              lg: "0 4rem 0 4rem",
+              xs: "0 20px",
+            },
+          }}
+        >
+          <Typography variant="h4" sx={{ marginBottom: "5px" }}>
+            {languageState.texts.Home.Hero.Title}
+          </Typography>
+        </Box>
         <Slider {...settings}>
           {news.slice(0, 5).map((item, i) => (
             <Link

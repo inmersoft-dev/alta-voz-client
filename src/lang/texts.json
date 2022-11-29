@@ -12,10 +12,10 @@
       "Company": "Inmersoft©",
       "Date": "2022"
     },
-
     "Home": {
       "Hero": {
-        "Button": "Ver Ahora"
+        "Title": "Lo mejor de lo mejor!",
+        "Button": "Ver ahora"
       },
       "CatchToAction": {
         "Title": "Compones canciones?",
@@ -28,19 +28,20 @@
         "SeeMore": "Ver más artistas"
       },
       "Albums": {
-        "Title": "Lo mejor de lo mejor!",
-        "Description": "Estos son los álbunes que están en tendencia",
+        "Title": "Nuevos lanzamientos de álbumes",
         "SeeMore": "Ver más álbunes"
       },
-      "Songs": {
-        "Title": "Ya escuchaste estos clips?",
-        "Description": "Mira los nuevos clips del momento",
-        "SeeMore": "Ver más clips"
+      "Concerts": {
+        "Title": "Próximos conciertos online ",
+        "SeeMore": "Ver más conciertos"
       },
-      "Genres": {
-        "Title": "Lista de género",
-        "Description": "Escucha una lista de tú género favorito",
-        "SeeMore": "Ver más listas"
+      "Songs": {
+        "Title": "Nuevos lanzamientos de sencillos",
+        "SeeMore": "Ver más lanzamientos"
+      },
+      "Videos": {
+        "Title": "Nuevos videos",
+        "SeeMore": "Ver más videos"
       }
     },
     "Navbar": {

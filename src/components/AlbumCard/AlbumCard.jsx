@@ -6,42 +6,60 @@ import PropTypes from "prop-types";
 import { css } from "@emotion/css";
 
 // @mui/material
-import { useTheme, Box, Typography } from "@mui/material";
-
-// sito components
-import SitoImage from "sito-image";
+import { Box, Typography } from "@mui/material";
 
 // images
-import noAlbum from "../../assets/images/noAlbum.jpg";
+import noBackground from "../../assets/images/noBackground.jpg";
+
+// test
+import { artists } from "../../data/data";
 
 const AlbumCard = (props) => {
-  const theme = useTheme();
-
   const { item } = props;
 
   return (
-    <Link
-      to={`/details?type=album&id=${item.id}`}
-      className={css({ color: "inherit", textDecoration: "none" })}
+    <Box
+      sx={{
+        height: "165px",
+        width: "100%",
+        background: `url(${item.image || noBackground})`,
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "center",
+        borderRadius: "15px",
+        position: "relative",
+        "&:hover": {
+          transition: "transform 500ms ease !important",
+          transform: "translateY(-10px)",
+        },
+      }}
     >
-      <Box
-        gap="10px"
-        component="a"
-        display="flex"
-        alignItems="center"
-        flexDirection="column"
-        justifyContent="center"
+      <Link
+        to={`/details?type=album&id=${item.id}`}
+        className={css({ color: "inherit", textDecoration: "none" })}
       >
-        <SitoImage
-          sx={{ width: "150px", height: "150px", borderRadius: "15px" }}
-          src={item.photo || noAlbum}
-          alt={item.id}
-        />
-        <Typography sx={{ color: theme.palette.disabled.main }}>
-          {item.name}
-        </Typography>
-      </Box>
-    </Link>
+        <Box
+          sx={{
+            width: "100%",
+            height: "100%",
+            borderRadius: "15px",
+            position: "absolute",
+            background: "#00000091",
+            padding: "20px",
+            display: "flex",
+            flexDirection: "column",
+            justify: "flex-end",
+          }}
+        >
+          <Typography variant="caption" sx={{ color: "aliceblue" }}>
+            {artists[item.authorId].name}
+          </Typography>
+          <Typography fontWeight="bold" sx={{ color: "aliceblue" }}>
+            {item.name}
+          </Typography>
+        </Box>
+      </Link>
+    </Box>
   );
 };
 

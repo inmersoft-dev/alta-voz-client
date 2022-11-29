@@ -7,18 +7,17 @@ import { css } from "@emotion/css";
 import { Box, Button, Typography } from "@mui/material";
 
 // components
-import Grid from "../../../components/Grid/Grid";
+import PrettyGrid from "../../../components/Grid/PrettyGrid";
 
 // contexts
 import { useLanguage } from "../../../context/LanguageProvider";
 
-const Genres = () => {
+const Concerts = () => {
   const { languageState } = useLanguage();
 
   return (
     <Box
       sx={{
-        marginTop: "40px",
         gap: "20px",
         display: "flex",
         flexDirection: "column",
@@ -31,20 +30,20 @@ const Genres = () => {
     >
       <Box display="flex" alignItems="center" justifyContent="space-between">
         <Box>
-          <Typography variant="h4" sx={{ marginBottom: "5px" }}>
-            {languageState.texts.Home.Genres.Title}
-          </Typography>
-          <Typography sx={{ marginBottom: "20px" }}>
-            {languageState.texts.Home.Genres.Description}
+          <Typography variant="h4" sx={{ marginBottom: "20px" }}>
+            {languageState.texts.Home.Concerts.Title}
           </Typography>
         </Box>
-        <Link to="/artists" className={css({ textDecoration: "none" })}>
-          <Button>{languageState.texts.Home.Genres.SeeMore}</Button>
+        <Link
+          to="/concerts?by=date"
+          className={css({ textDecoration: "none" })}
+        >
+          <Button>{languageState.texts.Home.Concerts.SeeMore}</Button>
         </Link>
       </Box>
-      <Grid models="genres" />
+      <PrettyGrid model="concerts" component="concert" />
     </Box>
   );
 };
 
-export default Genres;
+export default Concerts;

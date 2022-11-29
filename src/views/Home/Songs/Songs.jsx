@@ -98,8 +98,6 @@ const Songs = () => {
   return (
     <Box
       sx={{
-        marginTop: "40px",
-        marginBottom: "100px",
         gap: "20px",
         display: "flex",
         flexDirection: "column",
@@ -121,7 +119,7 @@ const Songs = () => {
         <Typography variant="h4" sx={{ marginBottom: "20px" }}>
           {languageState.texts.Home.Songs.Title}
         </Typography>
-        <Link to="/songs" className={css({ textDecoration: "none" })}>
+        <Link to="/songs?by=date" className={css({ textDecoration: "none" })}>
           <Button>{languageState.texts.Home.SeeMore}</Button>
         </Link>
       </Box>

@@ -4,9 +4,10 @@ import SitoContainer from "sito-container";
 // sections
 import Hero from "./Hero/Hero";
 import Songs from "./Songs/Songs";
-import Artists from "./Artists/Artists";
-import Genres from "./Genres/Genres";
+import Videos from "./Videos/Videos";
 import Albums from "./Albums/Albums";
+import Concerts from "./Concerts/Concerts";
+import Artists from "./Artists/Artists";
 // import CatchToAction from "./CatchToAction/CatchToAction";
 
 const Home = () => {
@@ -14,9 +15,11 @@ const Home = () => {
     <SitoContainer flexDirection="column" sx={{ height: "100%" }}>
       <Hero />
       <Albums />
-      <Artists />
-      <Genres />
       <Songs />
+      <Videos />
+      <Concerts />
+      <Artists />
+
       {/* <CatchToAction /> */}
     </SitoContainer>
   );
