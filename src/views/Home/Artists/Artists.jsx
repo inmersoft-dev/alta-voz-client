@@ -105,7 +105,6 @@ const Artists = () => {
           lg: "60px 4rem 60px 4rem",
           xs: "40px 20px",
         },
-        background: theme.palette.background.paper,
       }}
     >
       <Box display="flex" alignItems="center" justifyContent="space-between">

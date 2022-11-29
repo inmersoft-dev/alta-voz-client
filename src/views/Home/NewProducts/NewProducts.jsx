@@ -12,12 +12,13 @@ import PrettyGrid from "../../../components/Grid/PrettyGrid";
 // contexts
 import { useLanguage } from "../../../context/LanguageProvider";
 
-const Concerts = () => {
+const NewProducts = () => {
   const { languageState } = useLanguage();
 
   return (
     <Box
       sx={{
+        marginTop: "50px",
         gap: "20px",
         display: "flex",
         flexDirection: "column",
@@ -29,21 +30,16 @@ const Concerts = () => {
       }}
     >
       <Box display="flex" alignItems="center" justifyContent="space-between">
-        <Box>
-          <Typography variant="h4">
-            {languageState.texts.Home.Concerts.Title}
-          </Typography>
-        </Box>
-        <Link
-          to="/concerts?by=date"
-          className={css({ textDecoration: "none" })}
-        >
-          <Button>{languageState.texts.Home.Concerts.SeeMore}</Button>
+        <Typography variant="h4" sx={{ marginBottom: 0 }}>
+          {languageState.texts.Home.NewProducts.Title}
+        </Typography>
+        <Link to="/store" className={css({ textDecoration: "none" })}>
+          <Button>{languageState.texts.Home.NewProducts.SeeMore}</Button>
         </Link>
       </Box>
-      <PrettyGrid model="concerts" component="concert" />
+      <PrettyGrid model="albums" component="album" />
     </Box>
   );
 };
 
-export default Concerts;
+export default NewProducts;

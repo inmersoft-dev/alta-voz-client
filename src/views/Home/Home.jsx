@@ -11,6 +11,7 @@ import Events from "./Events/Events";
 import TopPlaylists from "./TopPlaylists/TopPlaylists";
 import Discover from "./Discover/Discover";
 import Artists from "./Artists/Artists";
+import NewProducts from "./NewProducts/NewProducts";
 // import CatchToAction from "./CatchToAction/CatchToAction";
 
 const Home = () => {
@@ -24,6 +25,7 @@ const Home = () => {
       <Events />
       <TopPlaylists />
       <Discover />
+      <NewProducts />
       <Artists />
 
       {/* <CatchToAction /> */}
