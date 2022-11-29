@@ -97,7 +97,7 @@ const Navbar = () => {
             endAdornment={
               <InputAdornment position="end">
                 <IconButton
-                  color="secondary"
+                  color="primary"
                   type="submit"
                   focused
                   aria-label="search"

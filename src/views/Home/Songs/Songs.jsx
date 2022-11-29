@@ -52,7 +52,7 @@ const Songs = () => {
       >
         <ChevronLeftIcon
           sx={{
-            color: `${theme.palette.disabled.main} !important`,
+            color: `#222 !important`,
             marginLeft: "-3px",
           }}
         />
@@ -77,7 +77,7 @@ const Songs = () => {
       >
         <ChevronRightIcon
           sx={{
-            color: `${theme.palette.disabled.main} !important`,
+            color: `#222 !important`,
           }}
         />
       </Button>

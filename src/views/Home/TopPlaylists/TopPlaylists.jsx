@@ -52,7 +52,7 @@ const TopPlaylists = () => {
       >
         <ChevronLeftIcon
           sx={{
-            color: `${theme.palette.disabled.main} !important`,
+            color: `#222 !important`,
             marginLeft: "-3px",
           }}
         />
@@ -77,7 +77,7 @@ const TopPlaylists = () => {
       >
         <ChevronRightIcon
           sx={{
-            color: `${theme.palette.disabled.main} !important`,
+            color: `#222 !important`,
           }}
         />
       </Button>

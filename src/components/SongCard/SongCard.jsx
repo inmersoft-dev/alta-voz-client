@@ -75,7 +75,7 @@ const SongCard = (props) => {
             }}
           >
             <PlayCircleFilledWhiteIcon
-              color="secondary"
+              color="primary"
               sx={{
                 fontSize: "80px",
               }}

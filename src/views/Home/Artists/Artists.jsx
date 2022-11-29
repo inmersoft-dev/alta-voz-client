@@ -33,7 +33,7 @@ const Artists = () => {
     slidesToScroll: 6,
     prevArrow: (
       <Button
-        color="secondary"
+        color="primary"
         variant="contained"
         sx={{
           zIndex: 20,
@@ -58,7 +58,7 @@ const Artists = () => {
     ),
     nextArrow: (
       <Button
-        color="secondary"
+        color="primary"
         variant="contained"
         sx={{
           zIndex: 20,
@@ -116,7 +116,7 @@ const Artists = () => {
           </Typography>
         </Box>
         <Link to="/artists" className={css({ textDecoration: "none" })}>
-          <Button color="secondary">
+          <Button color="primary">
             {languageState.texts.Home.Artists.SeeMore}
           </Button>
         </Link>

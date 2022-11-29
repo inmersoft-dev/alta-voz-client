@@ -34,7 +34,7 @@ const Artists = () => {
     slidesToScroll: 1,
     prevArrow: (
       <Button
-        color="secondary"
+        color="primary"
         variant="contained"
         sx={{
           zIndex: 20,
@@ -52,7 +52,7 @@ const Artists = () => {
       >
         <ChevronLeftIcon
           sx={{
-            color: `${theme.palette.primary.main} !important`,
+            color: `#222 !important`,
             marginLeft: "-3px",
           }}
         />
@@ -60,9 +60,10 @@ const Artists = () => {
     ),
     nextArrow: (
       <Button
-        color="secondary"
+        color="primary"
         variant="contained"
         sx={{
+          color: theme.palette.secondary.main,
           zIndex: 20,
           "&:before": {
             display: "none",
@@ -78,7 +79,7 @@ const Artists = () => {
       >
         <ChevronRightIcon
           sx={{
-            color: `${theme.palette.primary.main} !important`,
+            color: `#222 !important`,
           }}
         />
       </Button>

@@ -153,7 +153,7 @@ const Player = (props) => {
           <Typography fontSize="0.6rem" variant="caption">
             00:00
           </Typography>
-          <Slider size="small" color="secondary" value={songTrack} />
+          <Slider size="small" color="primary" value={songTrack} />
           <Typography fontSize="0.6rem" variant="caption">
             00:00
           </Typography>
