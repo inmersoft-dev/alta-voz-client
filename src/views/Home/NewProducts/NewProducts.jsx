@@ -18,7 +18,6 @@ const NewProducts = () => {
   return (
     <Box
       sx={{
-        marginTop: "50px",
         gap: "20px",
         display: "flex",
         flexDirection: "column",

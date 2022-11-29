@@ -96,13 +96,12 @@ const Artists = () => {
   return (
     <Box
       sx={{
-        marginTop: "40px",
         gap: "20px",
         display: "flex",
         flexDirection: "column",
         padding: {
-          xl: "60px 5rem 60px 5rem",
-          lg: "60px 4rem 60px 4rem",
+          xl: "0px 5rem 40px 5rem",
+          lg: "0px 4rem 40px 4rem",
           xs: "40px 20px",
         },
       }}
