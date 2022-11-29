@@ -12,7 +12,7 @@ import Grid from "../../../components/Grid/Grid";
 // contexts
 import { useLanguage } from "../../../context/LanguageProvider";
 
-const Videos = () => {
+const Discover = () => {
   const { languageState } = useLanguage();
 
   return (
@@ -30,10 +30,10 @@ const Videos = () => {
     >
       <Box display="flex" alignItems="center" justifyContent="space-between">
         <Typography variant="h4">
-          {languageState.texts.Home.Videos.Title}
+          {languageState.texts.Home.Discover.Title}
         </Typography>
-        <Link to="/songs?by=videos" className={css({ textDecoration: "none" })}>
-          <Button>{languageState.texts.Home.Videos.SeeMore}</Button>
+        <Link to="/songs?by=likes" className={css({ textDecoration: "none" })}>
+          <Button>{languageState.texts.Home.Discover.SeeMore}</Button>
         </Link>
       </Box>
       <Grid models="songs" />
@@ -41,4 +41,4 @@ const Videos = () => {
   );
 };
 
-export default Videos;
+export default Discover;

@@ -2,13 +2,20 @@
 import { useTheme, Box } from "@mui/material";
 
 // components
+import SongCard from "../SongCard/SongCard";
 import InViewComponent from "../InViewComponent/InViewComponent";
 
 // test
-import { songs, albums, artists, genres } from "../../data/data";
-import SongCard from "../SongCard/SongCard";
+import {
+  albums,
+  artists,
+  genres,
+  concerts,
+  events,
+  songs,
+} from "../../data/data";
 
-const models = { songs, albums, artists, genres };
+const models = { albums, artists, genres, concerts, events, songs };
 
 const Grid = (props) => {
   const theme = useTheme();
@@ -24,10 +31,10 @@ const Grid = (props) => {
       }}
     >
       <Box
-        sx={{ width: "100%", display: "flex", gap: "40px", flexWrap: "wrap" }}
+        sx={{ width: "100%", display: "flex", gap: "20px", flexWrap: "wrap" }}
       >
-        {songs.slice(9, 19).map((item, i) => (
-          <InViewComponent delay={`0.${i + 2}s`} sx={{ flex: "1 1 250px" }}>
+        {models[model].slice(9, 21).map((item, i) => (
+          <InViewComponent delay={`0.${i + 2}s`} sx={{ flex: "1 1 150px" }}>
             <SongCard item={item} index={i} />
           </InViewComponent>
         ))}

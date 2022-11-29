@@ -8,6 +8,8 @@ import Videos from "./Videos/Videos";
 import Albums from "./Albums/Albums";
 import Concerts from "./Concerts/Concerts";
 import Events from "./Events/Events";
+import TopPlaylists from "./TopPlaylists/TopPlaylists";
+import Discover from "./Discover/Discover";
 import Artists from "./Artists/Artists";
 // import CatchToAction from "./CatchToAction/CatchToAction";
 
@@ -20,6 +22,8 @@ const Home = () => {
       <Videos />
       <Concerts />
       <Events />
+      <TopPlaylists />
+      <Discover />
       <Artists />
 
       {/* <CatchToAction /> */}

@@ -14,7 +14,7 @@
     },
     "Home": {
       "Hero": {
-        "Title": "Lo mejor de lo mejor!",
+        "Title": "¡Lo mejor de lo mejor!",
         "Button": "Ver ahora"
       },
       "CatchToAction": {
@@ -46,6 +46,14 @@
       "Videos": {
         "Title": "Nuevos videos",
         "SeeMore": "Ver más videos"
+      },
+      "TopPlaylists": {
+        "Title": "Top playlits",
+        "SeeMore": "Ver más listas"
+      },
+      "Discover": {
+        "Title": "Descubra música",
+        "SeeMore": "Descubrir más"
       }
     },
     "Navbar": {
