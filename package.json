@@ -1,7 +1,8 @@
 {
   "name": "alta-voz-client",
   "version": "0.3.3",
-  "private": true,
+  "private": false,
+  "homepage": "https://inmersoft-dev.github.io/alta-voz-client/",
   "dependencies": {
     "@emotion/css": "^11.10.5",
     "@emotion/react": "^11.10.5",
@@ -38,7 +39,9 @@
     "start": "env-cmd -f .env react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
