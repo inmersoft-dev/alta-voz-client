@@ -28,16 +28,6 @@ const NotFound = () => {
           {languageState.texts.NotFound.Title}
         </Typography>
       </InViewComponent>
-      <InViewComponent delay="1.5s">
-        <Typography variant="h4">
-          {languageState.texts.NotFound.Subtitle.one}
-        </Typography>
-      </InViewComponent>
-      <InViewComponent delay="2.5s">
-        <Typography variant="h4">
-          {languageState.texts.NotFound.Subtitle.two}
-        </Typography>
-      </InViewComponent>
     </Box>
   );
 };

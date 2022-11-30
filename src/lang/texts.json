@@ -5,7 +5,7 @@
       "Login": "Iniciar sesión"
     },
     "NotFound": {
-      "Title": "No encontramos la página que buscas",
+      "Title": "No encontramos la página que buscas (Página en desarrollo)",
       "Subtitle": { "one": "pero...", "two": "tal vez te interese esto:" }
     },
     "Footer": {
