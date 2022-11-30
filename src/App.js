@@ -50,11 +50,11 @@ const App = () => {
               <Route path="/" element={<Main />}>
                 <Route index element={<Home />} />
               </Route>
-              <Route path="/auth" element={<></>}>
+              {/* <Route path="/auth" element={<></>}>
                 <Route index="index" element={<SignIn />} />
                 <Route exact path="/auth/sign-up" element={<SignUp />} />
                 <Route exact path="/auth/sign-out" element={<SignOut />} />
-              </Route>
+  </Route> */}
               <Route path="*" element={<NotFound />} />
             </Routes>
           </BrowserRouter>
