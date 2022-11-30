@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/alta-voz-client/static/css/main.2e560d63.css",
+    "main.js": "/alta-voz-client/static/js/main.506ca5dd.js",
+    "static/media/noGenre.png": "/alta-voz-client/static/media/noGenre.628a02d3d13e13c7680f.png",
+    "static/media/noPhoto.png": "/alta-voz-client/static/media/noPhoto.157f088b56f86d22066e.png",
+    "static/media/noBackground.jpg": "/alta-voz-client/static/media/noBackground.226f0c1ca55046269f88.jpg",
+    "static/media/poppins-all-400-normal.woff": "/alta-voz-client/static/media/poppins-all-400-normal.6fbfdac99c274b77fe96.woff",
+    "static/media/roboto-all-400-normal.woff": "/alta-voz-client/static/media/roboto-all-400-normal.c5d001fa922fa66a147f.woff",
+    "static/media/poppins-devanagari-400-normal.woff2": "/alta-voz-client/static/media/poppins-devanagari-400-normal.64d5f06ee726edd58ca3.woff2",
+    "static/media/logo.png": "/alta-voz-client/static/media/logo.5b502a8d000e7c785af0.png",
+    "static/media/roboto-latin-400-normal.woff2": "/alta-voz-client/static/media/roboto-latin-400-normal.b009a76ad6afe4ebd301.woff2",
+    "static/media/roboto-cyrillic-ext-400-normal.woff2": "/alta-voz-client/static/media/roboto-cyrillic-ext-400-normal.804378952da8a10faae2.woff2",
+    "static/media/roboto-latin-ext-400-normal.woff2": "/alta-voz-client/static/media/roboto-latin-ext-400-normal.861b791f9de857a6e7bc.woff2",
+    "static/media/roboto-cyrillic-400-normal.woff2": "/alta-voz-client/static/media/roboto-cyrillic-400-normal.71a33b6b50457b2c903a.woff2",
+    "static/media/poppins-latin-400-normal.woff2": "/alta-voz-client/static/media/poppins-latin-400-normal.405055dd680fa1dcdfa2.woff2",
+    "static/media/roboto-greek-400-normal.woff2": "/alta-voz-client/static/media/roboto-greek-400-normal.c35e4c3958e209d17b31.woff2",
+    "static/media/roboto-vietnamese-400-normal.woff2": "/alta-voz-client/static/media/roboto-vietnamese-400-normal.3230f9b040f3c630e0c3.woff2",
+    "static/media/poppins-latin-ext-400-normal.woff2": "/alta-voz-client/static/media/poppins-latin-ext-400-normal.4f38b4331448d2313adc.woff2",
+    "static/media/slick.svg": "/alta-voz-client/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/alta-voz-client/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/alta-voz-client/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/roboto-greek-ext-400-normal.woff2": "/alta-voz-client/static/media/roboto-greek-ext-400-normal.169619821ea93019d1bb.woff2",
+    "static/media/slick.woff": "/alta-voz-client/static/media/slick.295183786cd8a1389865.woff",
+    "index.html": "/alta-voz-client/index.html",
+    "main.2e560d63.css.map": "/alta-voz-client/static/css/main.2e560d63.css.map",
+    "main.506ca5dd.js.map": "/alta-voz-client/static/js/main.506ca5dd.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2e560d63.css",
+    "static/js/main.506ca5dd.js"
+  ]
+}
