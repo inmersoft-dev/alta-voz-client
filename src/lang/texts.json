@@ -77,40 +77,15 @@
         "Title": "Nuevos lanzamientos de sencillos",
         "SeeMore": "Ver más lanzamientos"
       },
-      "CatchToAction": {
-        "Title": "Compones canciones?",
-        "Description": "Con 18 años de historia, más de 138 mil artistas y más de 1 millón de canciones, somos una plataforma especializada en enseñar e impulsar carreras musicales.",
-        "Button": "Unirme ahora!"
-      },
-      "Artists": {
-        "Title": "Mejores artistas",
-        "Description": "La semana está bombeando con estos artistas!",
-        "SeeMore": "Ver más artistas"
-      },
-      "Events": {
-        "Title": "Próximos eventos",
-        "SeeMore": "Ver más eventos"
-      },
-      "Concerts": {
-        "Title": "Próximos conciertos online ",
-        "SeeMore": "Ver más conciertos"
-      },
-      "Songs": {
-        "Title": "Nuevos lanzamientos de sencillos",
-        "SeeMore": "Ver más lanzamientos"
-      },
-      "Videos": {
-        "Title": "Nuevos videos",
-        "SeeMore": "Ver más videos"
-      },
-
-      "NewProducts": {
-        "Title": "Nuevos productos",
-        "SeeMore": "Ver más productos"
-      },
-      "Discover": {
-        "Title": "Descubra música",
-        "SeeMore": "Descubrir más"
+      "TopCharts": {
+        "Title": "Top Charts",
+        "SeeMore": "Ver más",
+        "CardVideo": {
+          "Title": "Top music videos"
+        },
+        "CardArtist": {
+          "Title": "Top music artistas"
+        }
       }
     },
     "Navbar": {

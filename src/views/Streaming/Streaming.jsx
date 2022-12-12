@@ -7,6 +7,7 @@ import Simples from "./Simples/Simples";
 import Albums from "./Albums/Albums";
 import NewAlbums from "./NewAlbums/NewAlbums";
 import NewSimples from "./NewSimples/NewSimples";
+import TopCharts from "./TopCharts/TopCharts";
 // import CatchToAction from "./CatchToAction/CatchToAction";
 
 const Streaming = () => {
@@ -17,6 +18,7 @@ const Streaming = () => {
       <Albums />
       <NewAlbums />
       <NewSimples />
+      <TopCharts />
       {/* <CatchToAction /> */}
     </SitoContainer>
   );
