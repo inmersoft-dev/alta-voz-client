@@ -5,7 +5,7 @@ import SitoContainer from "sito-container";
 import Hero from "./Hero/Hero";
 import Songs from "./Songs/Songs";
 import Videos from "./Videos/Videos";
-import Albums from "./Albums/Albums";
+import Albums from "./Simples/Simples";
 import Concerts from "./Concerts/Concerts";
 import Events from "./Events/Events";
 import TopPlaylists from "./TopPlaylists/TopPlaylists";
@@ -14,7 +14,7 @@ import Artists from "./Artists/Artists";
 import NewProducts from "./NewProducts/NewProducts";
 // import CatchToAction from "./CatchToAction/CatchToAction";
 
-const Home = () => {
+const Streaming = () => {
   return (
     <SitoContainer flexDirection="column" sx={{ height: "100%" }}>
       <Hero />
@@ -33,4 +33,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Streaming;

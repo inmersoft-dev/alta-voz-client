@@ -29,6 +29,7 @@ import SignUp from "./views/Auth/SignUp";
 import SignIn from "./views/Auth/SignIn";
 import SignOut from "./views/Auth/SignOut";
 import NotFound from "./views/NotFound/NotFound";
+import Streaming from "./views/Streaming/Streaming";
 
 const App = () => {
   const { modeState } = useMode();
@@ -49,6 +50,7 @@ const App = () => {
             <Routes>
               <Route path="/" element={<Main />}>
                 <Route index element={<Home />} />
+                <Route path="/streaming" element={<Streaming />} />
               </Route>
               {/* <Route path="/auth" element={<></>}>
                 <Route index="index" element={<SignIn />} />
