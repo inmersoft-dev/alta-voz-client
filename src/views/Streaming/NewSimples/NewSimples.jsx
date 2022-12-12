@@ -21,7 +21,7 @@ import { useLanguage } from "../../../context/LanguageProvider";
 // test
 import { songs } from "../../../data/data";
 
-const TopPlaylists = () => {
+const NewSimples = () => {
   const theme = useTheme();
   const { languageState } = useLanguage();
 
@@ -117,13 +117,13 @@ const TopPlaylists = () => {
         }}
       >
         <Typography variant="h4">
-          {languageState.texts.Home.TopPlaylists.Title}
+          {languageState.texts.Streaming.NewSimples.Title}
         </Typography>
         <Link
           to="/playlists?by=date"
           className={css({ textDecoration: "none" })}
         >
-          <Button>{languageState.texts.Home.TopPlaylists.SeeMore}</Button>
+          <Button>{languageState.texts.Streaming.NewSimples.SeeMore}</Button>
         </Link>
       </Box>
       <Box
@@ -146,4 +146,4 @@ const TopPlaylists = () => {
   );
 };
 
-export default TopPlaylists;
+export default NewSimples;
