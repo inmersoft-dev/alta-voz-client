@@ -8,9 +8,17 @@ import ConcertCard from "../ConcertCard/ConcertCard";
 import InViewComponent from "../InViewComponent/InViewComponent";
 
 // test
-import { albums, artists, genres, concerts, events } from "../../data/data";
+import {
+  albums,
+  artists,
+  genres,
+  concerts,
+  events,
+  songs,
+} from "../../data/data";
+import SongCard from "../SongCard/SongCard";
 
-const models = { albums, artists, genres, concerts, events };
+const models = { albums, artists, genres, concerts, events, songs };
 
 const PrettyGrid = (props) => {
   const { model, component, filter, count } = props;
@@ -25,9 +33,18 @@ const PrettyGrid = (props) => {
       }}
     >
       {
-        <Box sx={{ width: "100%", display: "flex", gap: "20px" }}>
-          {models[model].slice(0, 4).map((item, i) => (
-            <InViewComponent delay={`0.${i + 2}s`} sx={{ width: "100%" }}>
+        <Box
+          sx={{
+            width: "100%",
+            display: "flex",
+            gap: "20px",
+            flexWrap: "wrap",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          {models[model].slice(0, count).map((item, i) => (
+            <InViewComponent delay={`0.${i + 2}s`} sx={{ flex: 1 }}>
               {component === "album" ? <AlbumCard item={item} /> : null}
               {component === "concert" ? (
                 <ConcertCard item={item} index={i} />
@@ -35,6 +52,7 @@ const PrettyGrid = (props) => {
               {component === "event" ? (
                 <EventCard item={item} index={i} />
               ) : null}
+              {component === "song" ? <SongCard item={item} index={i} /> : null}
             </InViewComponent>
           ))}
         </Box>

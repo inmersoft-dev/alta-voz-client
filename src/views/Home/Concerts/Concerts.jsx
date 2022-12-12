@@ -41,7 +41,7 @@ const Concerts = () => {
           <Button>{languageState.texts.Home.Concerts.SeeMore}</Button>
         </Link>
       </Box>
-      <PrettyGrid model="concerts" component="concert" />
+      <PrettyGrid count={4} model="concerts" component="concert" />
     </Box>
   );
 };

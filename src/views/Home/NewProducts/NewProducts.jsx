@@ -36,7 +36,7 @@ const NewProducts = () => {
           <Button>{languageState.texts.Home.NewProducts.SeeMore}</Button>
         </Link>
       </Box>
-      <PrettyGrid model="albums" component="album" />
+      <PrettyGrid count={4} model="albums" component="album" />
     </Box>
   );
 };

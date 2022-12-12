@@ -37,7 +37,7 @@ const Simples = () => {
           <Button>{languageState.texts.Streaming.Simples.SeeMore}</Button>
         </Link>
       </Box>
-      <PrettyGrid model="songs" component="album" />
+      <PrettyGrid model="songs" component="song" />
     </Box>
   );
 };

@@ -37,7 +37,7 @@ const Albums = () => {
           <Button>{languageState.texts.Home.Albums.SeeMore}</Button>
         </Link>
       </Box>
-      <PrettyGrid model="albums" component="album" />
+      <PrettyGrid count={4} model="albums" component="album" />
     </Box>
   );
 };
