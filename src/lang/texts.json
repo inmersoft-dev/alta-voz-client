@@ -60,6 +60,38 @@
         "SeeMore": "Descubrir más"
       }
     },
+    "Streaming": {
+      "Hero": {
+        "Title": "Nuevos lanzamientos",
+        "Button": "Ver ahora"
+      },
+      "Simples": {
+        "Title": "Sencillos en tendencia",
+        "SeeMore": "Ver más"
+      },
+      "NewAlbums": {
+        "Title": "Nuevos lanzamientos de álbumes",
+        "SeeMore": "Ver más lanzamientos"
+      },
+      "Recommendations": {
+        "Title": "Recomendaciones editoriales",
+        "SeeMore": "Ver más recomendaciones"
+      },
+      "NewSimples": {
+        "Title": "Nuevos lanzamientos de sencillos",
+        "SeeMore": "Ver más lanzamientos"
+      },
+      "TopCharts": {
+        "Title": "Top Charts",
+        "SeeMore": "Ver más",
+        "CardVideo": {
+          "Title": "Top music videos"
+        },
+        "CardArtist": {
+          "Title": "Top music artistas"
+        }
+      }
+    },
     "Navbar": {
       "Search": {
         "placeholder": "Buscar..."

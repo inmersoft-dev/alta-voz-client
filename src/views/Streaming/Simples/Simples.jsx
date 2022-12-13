@@ -12,12 +12,13 @@ import PrettyGrid from "../../../components/Grid/PrettyGrid";
 // contexts
 import { useLanguage } from "../../../context/LanguageProvider";
 
-const NewProducts = () => {
+const Simples = () => {
   const { languageState } = useLanguage();
 
   return (
     <Box
       sx={{
+        marginTop: "50px",
         gap: "20px",
         display: "flex",
         flexDirection: "column",
@@ -30,15 +31,15 @@ const NewProducts = () => {
     >
       <Box display="flex" alignItems="center" justifyContent="space-between">
         <Typography variant="h4" sx={{ marginBottom: 0 }}>
-          {languageState.texts.Home.NewProducts.Title}
+          {languageState.texts.Streaming.Simples.Title}
         </Typography>
-        <Link to="/store" className={css({ textDecoration: "none" })}>
-          <Button>{languageState.texts.Home.NewProducts.SeeMore}</Button>
+        <Link to="/artists" className={css({ textDecoration: "none" })}>
+          <Button>{languageState.texts.Streaming.Simples.SeeMore}</Button>
         </Link>
       </Box>
-      <PrettyGrid count={4} model="albums" component="album" />
+      <PrettyGrid model="songs" component="song" />
     </Box>
   );
 };
 
-export default NewProducts;
+export default Simples;

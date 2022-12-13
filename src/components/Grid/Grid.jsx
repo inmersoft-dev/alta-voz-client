@@ -20,7 +20,7 @@ const models = { albums, artists, genres, concerts, events, songs };
 const Grid = (props) => {
   const theme = useTheme();
   const { model, filter, count } = props;
-
+  console.log("models", models[model]);
   return (
     <Box
       sx={{
