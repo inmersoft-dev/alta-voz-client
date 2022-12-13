@@ -12,12 +12,12 @@ import { useTheme, Box, Typography } from "@mui/material";
 import SitoImage from "sito-image";
 
 // images
-import noGenre from "../../assets/images/noGenre.jpg";
+// import noGenre from "../../assets/images/noGenre.jpg";
 
 const ArtistCard = (props) => {
   const theme = useTheme();
 
-  const { item } = props;
+  const { item, index } = props;
 
   return (
     <Link
@@ -33,8 +33,18 @@ const ArtistCard = (props) => {
         justifyContent="center"
       >
         <SitoImage
-          sx={{ width: "150px", height: "150px", borderRadius: "100%" }}
-          src={item.photo || noGenre}
+          sx={{
+            width: "200px",
+            height: "200px",
+            borderRadius: "15px",
+            objectFit: "cover",
+          }}
+          src={
+            item.photo ||
+            `https://loremflickr.com/320/240/${
+              ["brazil", "paris", "canada"][Math.floor(Math.random() * 3)]
+            }/all?lock=${index}`
+          }
           alt={item.id}
         />
         <Typography sx={{ color: theme.palette.disabled.main }}>
@@ -46,6 +56,7 @@ const ArtistCard = (props) => {
 };
 
 ArtistCard.propTypes = {
+  index: PropTypes.number,
   item: PropTypes.shape({
     photo: PropTypes.string,
     id: PropTypes.string,

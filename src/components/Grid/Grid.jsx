@@ -5,6 +5,7 @@ import { Box } from "@mui/material";
 
 // components
 import SongCard from "../SongCard/SongCard";
+import GenreCard from "../GenreCard/GenreCard";
 import ProductCard from "../ProductCard/ProductCard";
 import InViewComponent from "../InViewComponent/InViewComponent";
 
@@ -36,6 +37,7 @@ const Grid = (props) => {
       <Box
         sx={{ width: "100%", display: "flex", gap: "20px", flexWrap: "wrap" }}
       >
+        
         {models[model].slice(0, count).map((item, i) => (
           <InViewComponent
             delay={`0.${i + 2}s`}
@@ -45,6 +47,7 @@ const Grid = (props) => {
             {component === "product" ? (
               <ProductCard item={item} index={i} />
             ) : null}
+            {component === "genre" ? <GenreCard item={item} index={i} /> : null}
           </InViewComponent>
         ))}
       </Box>

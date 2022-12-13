@@ -34,16 +34,11 @@ const Discover = () => {
         <Typography variant="h4">
           {languageState.texts.Home.Discover.Title}
         </Typography>
-        <Link to="/songs?by=likes" className={css({ textDecoration: "none" })}>
+        <Link to="/songs?by=genres" className={css({ textDecoration: "none" })}>
           <Button>{languageState.texts.Home.Discover.SeeMore}</Button>
         </Link>
       </Box>
-      <Grid
-        models="songs"
-        component="song"
-        count={12}
-        filter={[{ genders: ["urbano", "pop", "rock"] }]}
-      />
+      <Grid model="genres" component="genre" count={12} />
     </Box>
   );
 };

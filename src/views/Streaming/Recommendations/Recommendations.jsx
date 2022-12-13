@@ -33,10 +33,17 @@ const Recommendations = () => {
           {languageState.texts.Streaming.Recommendations.Title}
         </Typography>
         <Link to="/artists" className={css({ textDecoration: "none" })}>
-          <Button>{languageState.texts.Streaming.Recommendations.SeeMore}</Button>
+          <Button>
+            {languageState.texts.Streaming.Recommendations.SeeMore}
+          </Button>
         </Link>
       </Box>
-      <PrettyGrid count={4} model="albums" component="album" />
+      <PrettyGrid
+        count={4}
+        model="albums"
+        component="album"
+        childSx={{ flex: 1 }}
+      />
     </Box>
   );
 };
