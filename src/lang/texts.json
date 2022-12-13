@@ -60,21 +60,25 @@
         "Title": "Nuevos lanzamientos",
         "Button": "Ver ahora"
       },
-      "Simples": {
+      "TrendingSimples": {
         "Title": "Sencillos en tendencia",
         "SeeMore": "Ver más"
+      },
+      "TrendingAlbums": {
+        "Title": "Álbunes en tendiencia",
+        "SeeMore": "Ver más álbunes"
       },
       "NewAlbums": {
         "Title": "Nuevos lanzamientos de álbumes",
         "SeeMore": "Ver más lanzamientos"
       },
-      "Recommendations": {
-        "Title": "Recomendaciones editoriales",
-        "SeeMore": "Ver más recomendaciones"
-      },
       "NewSimples": {
         "Title": "Nuevos lanzamientos de sencillos",
         "SeeMore": "Ver más lanzamientos"
+      },
+      "Recommendations": {
+        "Title": "Recomendaciones editoriales",
+        "SeeMore": "Ver más recomendaciones"
       },
       "TopCharts": {
         "Title": "Top Charts",

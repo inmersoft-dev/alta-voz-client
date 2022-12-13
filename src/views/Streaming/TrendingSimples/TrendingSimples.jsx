@@ -12,13 +12,12 @@ import PrettyGrid from "../../../components/Grid/PrettyGrid";
 // contexts
 import { useLanguage } from "../../../context/LanguageProvider";
 
-const Albums = () => {
+const TrendingSimples = () => {
   const { languageState } = useLanguage();
 
   return (
     <Box
       sx={{
-        marginTop: "50px",
         gap: "20px",
         display: "flex",
         flexDirection: "column",
@@ -31,15 +30,22 @@ const Albums = () => {
     >
       <Box display="flex" alignItems="center" justifyContent="space-between">
         <Typography variant="h4" sx={{ marginBottom: 0 }}>
-          {languageState.texts.Home.Albums.Title}
+          {languageState.texts.Streaming.TrendingSimples.Title}
         </Typography>
         <Link to="/artists" className={css({ textDecoration: "none" })}>
-          <Button>{languageState.texts.Home.Albums.SeeMore}</Button>
+          <Button>
+            {languageState.texts.Streaming.TrendingSimples.SeeMore}
+          </Button>
         </Link>
       </Box>
-      <PrettyGrid model="albums" component="album" />
+      <PrettyGrid
+        count={12}
+        model="songs"
+        component="song"
+        childSx={{ flex: 1 }}
+      />
     </Box>
   );
 };
 
-export default Albums;
+export default TrendingSimples;

@@ -3,8 +3,8 @@ import SitoContainer from "sito-container";
 
 // sections
 import Hero from "./Hero/Hero";
-import Simples from "./Simples/Simples";
-import Albums from "./Albums/Albums";
+import TrendingSimples from "./TrendingSimples/TrendingSimples";
+import TrendingAlbums from "./TrendingAlbums/TrendingAlbums";
 import NewAlbums from "./NewAlbums/NewAlbums";
 import NewSimples from "./NewSimples/NewSimples";
 import TopCharts from "./TopCharts/TopCharts";
@@ -15,8 +15,8 @@ const Streaming = () => {
   return (
     <SitoContainer flexDirection="column" sx={{ height: "100%" }}>
       <Hero />
-      <Simples />
-      <Albums />
+      <TrendingSimples />
+      <TrendingAlbums />
       <NewAlbums />
       <NewSimples />
       <TopCharts />

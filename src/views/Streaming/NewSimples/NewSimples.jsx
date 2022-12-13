@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { css } from "@emotion/css";
 
 // @mui/material
-import { useTheme, Box, Button, Typography } from "@mui/material";
+import { Box, Button, Typography } from "@mui/material";
 
 // @mui/icons-material
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
@@ -22,7 +22,6 @@ import { useLanguage } from "../../../context/LanguageProvider";
 import { songs } from "../../../data/data";
 
 const NewSimples = () => {
-  const theme = useTheme();
   const { languageState } = useLanguage();
 
   var settings = {
@@ -102,8 +101,8 @@ const NewSimples = () => {
         display: "flex",
         flexDirection: "column",
         padding: {
-          xl: "0px 5rem 40px 5rem",
-          lg: "0px 4rem 40px 4rem",
+          xl: "40px 5rem 40px 5rem",
+          lg: "40px 4rem 40px 4rem",
           xs: "30px 20px",
         },
       }}
