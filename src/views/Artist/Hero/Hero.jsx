@@ -77,11 +77,10 @@ const Artists = () => {
           width: "100%",
           height: "100%",
           padding: "0 40px",
-          background:,
         }}
       >
         <Box sx={{ width: "270px", height: "270px", marginBottom: "-40px" }}>
-          <SitoImage
+          {/* <SitoImage
             sx={{ width: "100%", height: "100%", borderRadius: "100%" }}
             src={
               cArtist.photo ||
@@ -90,7 +89,7 @@ const Artists = () => {
               }/${index}.jpg`
             }
             alt={cArtist.name}
-          />
+          /> */}
         </Box>
       </Box>
     </Box>

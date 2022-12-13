@@ -31,8 +31,6 @@ import SignUp from "./views/Auth/SignUp";
 import SignIn from "./views/Auth/SignIn";
 import SignOut from "./views/Auth/SignOut";
 import NotFound from "./views/NotFound/NotFound";
-import Streaming from "./views/Streaming/Streaming";
-
 
 const App = () => {
   const { modeState } = useMode();

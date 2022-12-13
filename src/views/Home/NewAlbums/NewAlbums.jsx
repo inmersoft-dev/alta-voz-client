@@ -12,7 +12,7 @@ import PrettyGrid from "../../../components/Grid/PrettyGrid";
 // contexts
 import { useLanguage } from "../../../context/LanguageProvider";
 
-const Albums = () => {
+const NewAlbums = () => {
   const { languageState } = useLanguage();
 
   return (
@@ -31,15 +31,15 @@ const Albums = () => {
     >
       <Box display="flex" alignItems="center" justifyContent="space-between">
         <Typography variant="h4" sx={{ marginBottom: 0 }}>
-          {languageState.texts.Home.Albums.Title}
+          {languageState.texts.Home.NewAlbums.Title}
         </Typography>
         <Link to="/artists" className={css({ textDecoration: "none" })}>
-          <Button>{languageState.texts.Home.Albums.SeeMore}</Button>
+          <Button>{languageState.texts.Home.NewAlbums.SeeMore}</Button>
         </Link>
       </Box>
-      <PrettyGrid count={4} model="albums" component="album" />
+      <PrettyGrid count={6} model="albums" component="album" />
     </Box>
   );
 };
 
-export default Albums;
+export default NewAlbums;

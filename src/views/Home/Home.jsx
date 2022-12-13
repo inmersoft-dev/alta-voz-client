@@ -5,7 +5,8 @@ import SitoContainer from "sito-container";
 import Hero from "./Hero/Hero";
 import Songs from "./Songs/Songs";
 import Videos from "./Videos/Videos";
-import Albums from "./Albums/Albums";
+import NewAlbums from "./NewAlbums/NewAlbums";
+import LastNews from "./LastNews/LastNews";
 import Concerts from "./Concerts/Concerts";
 import Events from "./Events/Events";
 import TopPlaylists from "./TopPlaylists/TopPlaylists";
@@ -18,7 +19,8 @@ const Home = () => {
   return (
     <SitoContainer flexDirection="column" sx={{ height: "100%" }}>
       <Hero />
-      <Albums />
+      <NewAlbums />
+      <LastNews />
       <Songs />
       <Videos />
       <Concerts />
