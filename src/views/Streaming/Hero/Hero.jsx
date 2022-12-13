@@ -129,7 +129,7 @@ const Artists = () => {
           }}
         >
           <Typography variant="h4">
-            {languageState.texts.Streaming.Hero.Title}
+            {languageState.texts.Home.Hero.Title}
           </Typography>
         </Box>
         <Slider {...settings}>
@@ -182,7 +182,7 @@ const Artists = () => {
                         marginTop: "20px",
                       }}
                     >
-                      {languageState.texts.Streaming.Hero.Button}
+                      {languageState.texts.Home.Hero.Button}
                     </Button>
                   </Box>
                 </Box>

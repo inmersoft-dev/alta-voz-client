@@ -1,5 +1,5 @@
 // @mui/material
-import { useTheme, Box } from "@mui/material";
+import { Box } from "@mui/material";
 
 // components
 import SongCard from "../SongCard/SongCard";
@@ -18,8 +18,7 @@ import {
 const models = { albums, artists, genres, concerts, events, songs };
 
 const Grid = (props) => {
-  const theme = useTheme();
-  const { model, filter, count } = props;
+  const { model, filter, count, childSx } = props;
   console.log("models", models[model]);
   return (
     <Box
@@ -33,8 +32,11 @@ const Grid = (props) => {
       <Box
         sx={{ width: "100%", display: "flex", gap: "20px", flexWrap: "wrap" }}
       >
-        {models[model].slice(9, 21).map((item, i) => (
-          <InViewComponent delay={`0.${i + 2}s`} sx={{ flex: "1 1 150px" }}>
+        {models[model].slice(0, count).map((item, i) => (
+          <InViewComponent
+            delay={`0.${i + 2}s`}
+            sx={{ flex: "1 1 150px", ...childSx }}
+          >
             <SongCard item={item} index={i} />
           </InViewComponent>
         ))}

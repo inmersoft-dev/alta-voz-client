@@ -24,9 +24,8 @@ const Home = () => {
       <NewSimples />
       <Concerts />
       <Events />
-      <Videos />
-
       <TopPlaylists />
+      <Videos />
       <Discover />
       <NewProducts />
       <Artists />

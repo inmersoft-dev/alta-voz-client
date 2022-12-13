@@ -38,7 +38,7 @@ const Discover = () => {
           <Button>{languageState.texts.Home.Discover.SeeMore}</Button>
         </Link>
       </Box>
-      <Grid models="songs" />
+      <Grid models="songs" count={12} />
     </Box>
   );
 };

@@ -1,29 +1,7 @@
-// sito components
-import SitoContainer from "sito-container";
+import React from "react";
 
-// sections
-import Hero from "./Hero/Hero";
-import Simples from "./Simples/Simples";
-import Albums from "./Albums/Albums";
-import NewAlbums from "./NewAlbums/NewAlbums";
-import NewSimples from "./NewSimples/NewSimples";
-import TopCharts from "./TopCharts/TopCharts";
-import Recommendations from "./Recommendations/Recommendations";
-// import CatchToAction from "./CatchToAction/CatchToAction";
-
-const Streaming = () => {
-  return (
-    <SitoContainer flexDirection="column" sx={{ height: "100%" }}>
-      <Hero />
-      <Simples />
-      <Albums />
-      <NewAlbums />
-      <NewSimples />
-      <TopCharts />
-      <Recommendations />
-      {/* <CatchToAction /> */}
-    </SitoContainer>
-  );
+const Stream = () => {
+  return <div></div>;
 };
 
-export default Streaming;
+export default Stream;

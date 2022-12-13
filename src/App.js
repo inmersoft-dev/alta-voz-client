@@ -25,7 +25,7 @@ import Main from "./layouts/Main";
 
 // views
 import Home from "./views/Home/Home";
-import Streaming from "./views/Steaming/Streaming";
+import Streaming from "./views/Streaming/Streaming";
 import Artist from "./views/Artist/Artist";
 import SignUp from "./views/Auth/SignUp";
 import SignIn from "./views/Auth/SignIn";
