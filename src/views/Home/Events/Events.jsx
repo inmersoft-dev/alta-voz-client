@@ -41,7 +41,12 @@ const Events = () => {
           <Button>{languageState.texts.Home.Events.SeeMore}</Button>
         </Link>
       </Box>
-      <PrettyGrid count={4} model="events" component="event" />
+      <PrettyGrid
+        count={4}
+        model="events"
+        component="event"
+        childSx={{ flex: 1 }}
+      />
     </Box>
   );
 };

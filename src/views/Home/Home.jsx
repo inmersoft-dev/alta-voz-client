@@ -3,10 +3,10 @@ import SitoContainer from "sito-container";
 
 // sections
 import Hero from "./Hero/Hero";
-import Songs from "./Songs/Songs";
 import Videos from "./Videos/Videos";
 import NewAlbums from "./NewAlbums/NewAlbums";
 import LastNews from "./LastNews/LastNews";
+import NewSimples from "./NewSimples/NewSimples";
 import Concerts from "./Concerts/Concerts";
 import Events from "./Events/Events";
 import TopPlaylists from "./TopPlaylists/TopPlaylists";
@@ -21,10 +21,11 @@ const Home = () => {
       <Hero />
       <NewAlbums />
       <LastNews />
-      <Songs />
-      <Videos />
+      <NewSimples />
       <Concerts />
       <Events />
+      <Videos />
+
       <TopPlaylists />
       <Discover />
       <NewProducts />

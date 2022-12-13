@@ -37,7 +37,12 @@ const NewAlbums = () => {
           <Button>{languageState.texts.Home.NewAlbums.SeeMore}</Button>
         </Link>
       </Box>
-      <PrettyGrid count={6} model="albums" component="album" />
+      <PrettyGrid
+        count={6}
+        model="albums"
+        component="album"
+        childSx={{ flex: 1 }}
+      />
     </Box>
   );
 };

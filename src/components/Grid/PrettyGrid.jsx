@@ -23,7 +23,7 @@ import SongCard from "../SongCard/SongCard";
 const models = { albums, artists, genres, concerts, events, songs, news };
 
 const PrettyGrid = (props) => {
-  const { model, component, filter, count, sx } = props;
+  const { model, component, filter, count, sx, childSx } = props;
 
   return (
     <Box
@@ -44,7 +44,10 @@ const PrettyGrid = (props) => {
         }}
       >
         {models[model].slice(0, count).map((item, i) => (
-          <InViewComponent delay={`0.${i + 2}s`} sx={{ flex: "1 1 350px" }}>
+          <InViewComponent
+            delay={`0.${i + 2}s`}
+            sx={{ flex: "1 1 350px", ...childSx }}
+          >
             {component === "album" ? <AlbumCard item={item} /> : null}
             {component === "concert" ? (
               <ConcertCard item={item} index={i} />

@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { css } from "@emotion/css";
 
 // @mui/material
-import { useTheme, Box, Button, Typography } from "@mui/material";
+import { Box, Button, Typography } from "@mui/material";
 
 // @mui/icons-material
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
@@ -21,8 +21,7 @@ import { useLanguage } from "../../../context/LanguageProvider";
 // test
 import { songs } from "../../../data/data";
 
-const Songs = () => {
-  const theme = useTheme();
+const NewSimples = () => {
   const { languageState } = useLanguage();
 
   var settings = {
@@ -117,10 +116,10 @@ const Songs = () => {
         }}
       >
         <Typography variant="h4">
-          {languageState.texts.Home.Songs.Title}
+          {languageState.texts.Home.NewSimples.Title}
         </Typography>
         <Link to="/songs?by=date" className={css({ textDecoration: "none" })}>
-          <Button>{languageState.texts.Home.Songs.SeeMore}</Button>
+          <Button>{languageState.texts.Home.NewSimples.SeeMore}</Button>
         </Link>
       </Box>
       <Box
@@ -143,4 +142,4 @@ const Songs = () => {
   );
 };
 
-export default Songs;
+export default NewSimples;

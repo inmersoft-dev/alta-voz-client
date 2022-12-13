@@ -29,8 +29,6 @@ const NewsCard = (props) => {
     <Box
       sx={{
         height: "350px",
-        width: "350px",
-        border: "1px solid",
         borderRadius: "15px",
         position: "relative",
         "&:hover": {
