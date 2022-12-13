@@ -9,6 +9,11 @@ import NewAlbums from "./NewAlbums/NewAlbums";
 import NewSimples from "./NewSimples/NewSimples";
 import TopCharts from "./TopCharts/TopCharts";
 import Recommendations from "./Recommendations/Recommendations";
+import MostNotable from "./MostNotable/MostNotable";
+import Artists from "./Artists/Artists";
+import TopPlaylists from "./TopPlaylists/TopPlaylists";
+import TopVideos from "./TopVideos/TopVideos";
+import Moods from "./Moods/Moods";
 // import CatchToAction from "./CatchToAction/CatchToAction";
 
 const Streaming = () => {
@@ -21,6 +26,11 @@ const Streaming = () => {
       <NewSimples />
       <TopCharts />
       <Recommendations />
+      <MostNotable />
+      <Artists />
+      <TopPlaylists />
+      <TopVideos />
+      <Moods />
       {/* <CatchToAction /> */}
     </SitoContainer>
   );

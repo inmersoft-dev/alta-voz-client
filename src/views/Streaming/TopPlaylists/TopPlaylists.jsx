@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { css } from "@emotion/css";
 
 // @mui/material
-import { useTheme, Box, Button, Typography } from "@mui/material";
+import { Box, Button, Typography } from "@mui/material";
 
 // components
 import Grid from "../../../components/Grid/Grid";
@@ -12,8 +12,7 @@ import Grid from "../../../components/Grid/Grid";
 // contexts
 import { useLanguage } from "../../../context/LanguageProvider";
 
-const MostNotable = () => {
-  const theme = useTheme();
+const TopPlaylists = () => {
   const { languageState } = useLanguage();
 
   return (
@@ -27,20 +26,19 @@ const MostNotable = () => {
           lg: "40px 4rem 40px 4rem",
           xs: "30px 20px",
         },
-        background: theme.palette.background.paper,
       }}
     >
       <Box display="flex" alignItems="center" justifyContent="space-between">
         <Typography variant="h4">
-          {languageState.texts.Streaming.MostNotable.Title}
+          {languageState.texts.Streaming.TopPlaylists.Title}
         </Typography>
-        <Link to="/songs?by=genres" className={css({ textDecoration: "none" })}>
-          <Button>{languageState.texts.Streaming.MostNotable.SeeMore}</Button>
+        <Link to="/songs?by=likes" className={css({ textDecoration: "none" })}>
+          <Button>{languageState.texts.Streaming.TopPlaylists.SeeMore}</Button>
         </Link>
       </Box>
-      <Grid model="genres" component="genre" count={12} />
+      <Grid models="songs" count={6} />
     </Box>
   );
 };
 
-export default MostNotable;
+export default TopPlaylists;

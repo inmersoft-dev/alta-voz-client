@@ -5,32 +5,29 @@ import { Link } from "react-router-dom";
 import { css } from "@emotion/css";
 
 // @mui/material
-import { useTheme, Box, Button, Typography } from "@mui/material";
+import { Box, Button, Typography } from "@mui/material";
 
 // @mui/icons-material
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 
 // components
-import SongCard from "../../../components/SongCard/SongCard";
+import ArtistCard from "../../../components/ArtistCard/ArtistCard";
 import InViewComponent from "../../../components/InViewComponent/InViewComponent";
 
 // contexts
 import { useLanguage } from "../../../context/LanguageProvider";
 
 // test
-import { songs } from "../../../data/data";
+import { artists } from "../../../data/data";
 
-const Songs = () => {
-  const theme = useTheme();
+const Artists = () => {
   const { languageState } = useLanguage();
 
   var settings = {
     dots: false,
     infinite: false,
     speed: 1000,
-    autoplay: true,
-    autoplaySpeed: 2000,
     slidesToShow: 6,
     slidesToScroll: 6,
     prevArrow: (
@@ -102,25 +99,20 @@ const Songs = () => {
         display: "flex",
         flexDirection: "column",
         padding: {
-          xl: "0px 5rem 40px 5rem",
-          lg: "0px 4rem 40px 4rem",
-          xs: "30px 20px",
+          xl: "40px 5rem 40px 5rem",
+          lg: "40px 4rem 40px 4rem",
+          xs: "40px 20px",
         },
       }}
     >
-      <Box
-        sx={{
-          width: "100%",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-between",
-        }}
-      >
-        <Typography variant="h4">
-          {languageState.texts.Home.Songs.Title}
+      <Box display="flex" alignItems="center" justifyContent="space-between">
+        <Typography variant="h4" sx={{ marginBottom: "5px" }}>
+          {languageState.texts.Streaming.Artists.Title}
         </Typography>
-        <Link to="/songs?by=date" className={css({ textDecoration: "none" })}>
-          <Button>{languageState.texts.Home.Songs.SeeMore}</Button>
+        <Link to="/artists" className={css({ textDecoration: "none" })}>
+          <Button color="primary">
+            {languageState.texts.Streaming.Artists.SeeMore}
+          </Button>
         </Link>
       </Box>
       <Box
@@ -132,9 +124,9 @@ const Songs = () => {
         }}
       >
         <Slider {...settings}>
-          {songs.slice(0, 18).map((item, i) => (
+          {artists.slice(0, 18).map((item, i) => (
             <InViewComponent key={item.id} delay={`0.${i + 1}s`}>
-              <SongCard item={item} index={i} />
+              <ArtistCard item={item} index={i} />
             </InViewComponent>
           ))}
         </Slider>
@@ -143,4 +135,4 @@ const Songs = () => {
   );
 };
 
-export default Songs;
+export default Artists;

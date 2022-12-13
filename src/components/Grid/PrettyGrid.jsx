@@ -6,6 +6,7 @@ import NewsCard from "../NewsCard/NewsCard";
 import AlbumCard from "../AlbumCard/AlbumCard";
 import EventCard from "../EventCard/EventCard";
 import ConcertCard from "../ConcertCard/ConcertCard";
+import MoodCard from "../MoodCard/MoodCard";
 import InViewComponent from "../InViewComponent/InViewComponent";
 
 // test
@@ -17,10 +18,20 @@ import {
   events,
   songs,
   news,
+  moods,
 } from "../../data/data";
 import SongCard from "../SongCard/SongCard";
 
-const models = { albums, artists, genres, concerts, events, songs, news };
+const models = {
+  albums,
+  artists,
+  genres,
+  concerts,
+  events,
+  songs,
+  news,
+  moods,
+};
 
 const PrettyGrid = (props) => {
   const { model, component, filter, count, sx, childSx } = props;
@@ -55,6 +66,7 @@ const PrettyGrid = (props) => {
             {component === "event" ? <EventCard item={item} index={i} /> : null}
             {component === "song" ? <SongCard item={item} index={i} /> : null}
             {component === "news" ? <NewsCard item={item} index={i} /> : null}
+            {component === "mood" ? <MoodCard item={item} index={i} /> : null}
           </InViewComponent>
         ))}
       </Box>

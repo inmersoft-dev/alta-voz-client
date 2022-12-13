@@ -89,6 +89,26 @@
         "CardArtist": {
           "Title": "Top music artistas"
         }
+      },
+      "MostNotable": {
+        "Title": "Lo más notable",
+        "SeeMore": "Ver más"
+      },
+      "Artists": {
+        "Title": "Artistas más buscados",
+        "SeeMore": "Ver más artistas"
+      },
+      "TopPlaylists": {
+        "Title": "Las listas que más suenan",
+        "Button": "Ver más listas"
+      },
+      "TopVideos": {
+        "Title": "Los videos que más suenan",
+        "Button": "Ver más videos"
+      },
+      "Moods": {
+        "Title": "Estados de ánimo",
+        "Button": "Ver más"
       }
     },
     "Navbar": {

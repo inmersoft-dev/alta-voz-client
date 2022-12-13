@@ -7,18 +7,17 @@ import { css } from "@emotion/css";
 import { Box, Button, Typography } from "@mui/material";
 
 // components
-import PrettyGrid from "../../../components/Grid/PrettyGrid";
+import Grid from "../../../components/Grid/Grid";
 
 // contexts
 import { useLanguage } from "../../../context/LanguageProvider";
 
-const Albums = () => {
+const TopVideos = () => {
   const { languageState } = useLanguage();
 
   return (
     <Box
       sx={{
-        marginTop: "50px",
         gap: "20px",
         display: "flex",
         flexDirection: "column",
@@ -30,16 +29,16 @@ const Albums = () => {
       }}
     >
       <Box display="flex" alignItems="center" justifyContent="space-between">
-        <Typography variant="h4" sx={{ marginBottom: 0 }}>
-          {languageState.texts.Home.Albums.Title}
+        <Typography variant="h4">
+          {languageState.texts.Streaming.TopVideos.Title}
         </Typography>
-        <Link to="/artists" className={css({ textDecoration: "none" })}>
-          <Button>{languageState.texts.Home.Albums.SeeMore}</Button>
+        <Link to="/songs?by=likes" className={css({ textDecoration: "none" })}>
+          <Button>{languageState.texts.Streaming.TopVideos.SeeMore}</Button>
         </Link>
       </Box>
-      <PrettyGrid model="albums" component="album" />
+      <Grid models="songs" count={6} />
     </Box>
   );
 };
 
-export default Albums;
+export default TopVideos;

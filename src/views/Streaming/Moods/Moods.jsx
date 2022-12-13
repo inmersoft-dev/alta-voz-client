@@ -4,15 +4,15 @@ import { Link } from "react-router-dom";
 import { css } from "@emotion/css";
 
 // @mui/material
-import { useTheme, Box, Button, Typography } from "@mui/material";
+import { Box, Button, Typography, useTheme } from "@mui/material";
 
 // components
-import Grid from "../../../components/Grid/Grid";
+import PrettyGrid from "../../../components/Grid/PrettyGrid";
 
 // contexts
 import { useLanguage } from "../../../context/LanguageProvider";
 
-const MostNotable = () => {
+const Moods = () => {
   const theme = useTheme();
   const { languageState } = useLanguage();
 
@@ -31,16 +31,26 @@ const MostNotable = () => {
       }}
     >
       <Box display="flex" alignItems="center" justifyContent="space-between">
-        <Typography variant="h4">
-          {languageState.texts.Streaming.MostNotable.Title}
-        </Typography>
-        <Link to="/songs?by=genres" className={css({ textDecoration: "none" })}>
-          <Button>{languageState.texts.Streaming.MostNotable.SeeMore}</Button>
+        <Box>
+          <Typography variant="h4">
+            {languageState.texts.Streaming.Moods.Title}
+          </Typography>
+        </Box>
+        <Link
+          to="/concerts?by=date"
+          className={css({ textDecoration: "none" })}
+        >
+          <Button>{languageState.texts.Streaming.Moods.SeeMore}</Button>
         </Link>
       </Box>
-      <Grid model="genres" component="genre" count={12} />
+      <PrettyGrid
+        count={4}
+        model="moods"
+        component="mood"
+        childSx={{ flex: 1 }}
+      />
     </Box>
   );
 };
 
-export default MostNotable;
+export default Moods;
