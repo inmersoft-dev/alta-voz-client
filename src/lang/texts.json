@@ -75,15 +75,15 @@
         },
         {
           "to": "/news",
-          "label": "Noticias"
+          "label": "Noticias y reseñas"
         },
         {
-          "to": "/concerts",
-          "label": "Conciertos"
+          "to": "/events",
+          "label": "Alta-Voz.TV"
         },
         {
-          "to": "/artists",
-          "label": "Radio y TV"
+          "to": "/alta-voz-tv",
+          "label": "Alta-Voz.TV"
         },
         {
           "to": "/community",

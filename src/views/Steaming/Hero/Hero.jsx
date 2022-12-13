@@ -118,7 +118,7 @@ const Artists = () => {
           },
         }}
       >
-        {/* <Box
+        <Box
           sx={{
             marginBottom: "20px",
             padding: {
@@ -131,7 +131,7 @@ const Artists = () => {
           <Typography variant="h4">
             {languageState.texts.Home.Hero.Title}
           </Typography>
-        </Box> */}
+        </Box>
         <Slider {...settings}>
           {news.slice(0, 5).map((item, i) => (
             <Link

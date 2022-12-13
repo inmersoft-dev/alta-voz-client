@@ -25,10 +25,13 @@ import Main from "./layouts/Main";
 
 // views
 import Home from "./views/Home/Home";
+import Streaming from "./views/Steaming/Streaming";
+import Artist from "./views/Artist/Artist";
 import SignUp from "./views/Auth/SignUp";
 import SignIn from "./views/Auth/SignIn";
 import SignOut from "./views/Auth/SignOut";
 import NotFound from "./views/NotFound/NotFound";
+
 
 const App = () => {
   const { modeState } = useMode();
@@ -49,6 +52,8 @@ const App = () => {
             <Routes>
               <Route path="/" element={<Main />}>
                 <Route index element={<Home />} />
+                <Route path="/streaming" element={<Streaming />} />
+                <Route path="/artist" element={<Artist />} />
               </Route>
               {/* <Route path="/auth" element={<></>}>
                 <Route index="index" element={<SignIn />} />

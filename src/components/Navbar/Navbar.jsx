@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 
 // @emotion/css
 import { css } from "@emotion/css";
@@ -37,8 +37,10 @@ import logo from "../../assets/images/logo.png";
 
 const Navbar = () => {
   const theme = useTheme();
-  const { modeState, setModeState } = useMode();
+  const location = useLocation();
+
   const { languageState } = useLanguage();
+  const { modeState, setModeState } = useMode();
 
   const [showDrawer, setShowDrawer] = useState(false);
 
@@ -48,6 +50,12 @@ const Navbar = () => {
   const actionToSearch = () => {};
 
   const preventDefault = (event) => event.preventDefault();
+  const [cPathname, setCPathname] = useState("/");
+
+  useEffect(() => {
+    const { pathname } = location;
+    setCPathname(pathname);
+  }, [location]);
 
   return (
     <Box
@@ -132,7 +140,9 @@ const Navbar = () => {
               },
             })}
           >
-            <Typography>{item.label}</Typography>
+            <Typography color={item.to === cPathname ? "primary" : "inherit"}>
+              {item.label}
+            </Typography>
           </Link>
         ))}
         <Button
