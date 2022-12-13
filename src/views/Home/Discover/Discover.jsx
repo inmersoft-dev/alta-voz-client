@@ -38,7 +38,11 @@ const Discover = () => {
           <Button>{languageState.texts.Home.Discover.SeeMore}</Button>
         </Link>
       </Box>
-      <Grid models="songs" count={12} />
+      <Grid
+        models="songs"
+        count={12}
+        filter={[{ genders: ["urbano", "pop", "rock"] }]}
+      />
     </Box>
   );
 };
