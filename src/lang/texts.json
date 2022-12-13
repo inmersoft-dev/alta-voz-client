@@ -109,6 +109,13 @@
       "Moods": {
         "Title": "Estados de ánimo",
         "Button": "Ver más"
+      },
+      "Discover": {
+        "Title": "Descubrir música",
+        "Tooltip": "Filtros",
+        "Filters": {
+          "Genres": "Género"
+        }
       }
     },
     "Navbar": {
