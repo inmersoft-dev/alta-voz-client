@@ -40,6 +40,7 @@ const Discover = () => {
       </Box>
       <Grid
         models="songs"
+        component="song"
         count={12}
         filter={[{ genders: ["urbano", "pop", "rock"] }]}
       />

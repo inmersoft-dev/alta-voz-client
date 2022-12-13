@@ -7,7 +7,7 @@ import { css } from "@emotion/css";
 import { Box, Button, Typography } from "@mui/material";
 
 // components
-import PrettyGrid from "../../../components/Grid/PrettyGrid";
+import Grid from "../../../components/Grid/Grid";
 
 // contexts
 import { useLanguage } from "../../../context/LanguageProvider";
@@ -36,7 +36,7 @@ const NewProducts = () => {
           <Button>{languageState.texts.Home.NewProducts.SeeMore}</Button>
         </Link>
       </Box>
-      <PrettyGrid count={4} model="albums" component="album" />
+      <Grid count={6} model="products" component="product" />
     </Box>
   );
 };

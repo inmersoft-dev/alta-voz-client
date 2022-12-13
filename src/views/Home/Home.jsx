@@ -3,7 +3,6 @@ import SitoContainer from "sito-container";
 
 // sections
 import Hero from "./Hero/Hero";
-import Videos from "./Videos/Videos";
 import NewAlbums from "./NewAlbums/NewAlbums";
 import LastNews from "./LastNews/LastNews";
 import NewSimples from "./NewSimples/NewSimples";
@@ -13,7 +12,6 @@ import TopPlaylists from "./TopPlaylists/TopPlaylists";
 import Discover from "./Discover/Discover";
 import Artists from "./Artists/Artists";
 import NewProducts from "./NewProducts/NewProducts";
-// import CatchToAction from "./CatchToAction/CatchToAction";
 
 const Home = () => {
   return (
@@ -25,12 +23,9 @@ const Home = () => {
       <Concerts />
       <Events />
       <TopPlaylists />
-      <Videos />
       <Discover />
       <NewProducts />
       <Artists />
-
-      {/* <CatchToAction /> */}
     </SitoContainer>
   );
 };

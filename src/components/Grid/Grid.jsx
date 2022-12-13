@@ -1,8 +1,11 @@
+import PropTypes from "prop-types";
+
 // @mui/material
 import { Box } from "@mui/material";
 
 // components
 import SongCard from "../SongCard/SongCard";
+import ProductCard from "../ProductCard/ProductCard";
 import InViewComponent from "../InViewComponent/InViewComponent";
 
 // test
@@ -13,12 +16,13 @@ import {
   concerts,
   events,
   songs,
+  products,
 } from "../../data/data";
 
-const models = { albums, artists, genres, concerts, events, songs };
+const models = { albums, artists, genres, concerts, events, songs, products };
 
 const Grid = (props) => {
-  const { model, filter, count, childSx } = props;
+  const { model, filter, count, childSx, component } = props;
   console.log("models", models[model]);
   return (
     <Box
@@ -37,7 +41,10 @@ const Grid = (props) => {
             delay={`0.${i + 2}s`}
             sx={{ flex: "1 1 150px", ...childSx }}
           >
-            <SongCard item={item} index={i} />
+            {component === "song" ? <SongCard item={item} index={i} /> : null}
+            {component === "product" ? (
+              <ProductCard item={item} index={i} />
+            ) : null}
           </InViewComponent>
         ))}
       </Box>
@@ -49,6 +56,14 @@ Grid.defaultProps = {
   count: 10,
   model: "songs",
   filter: "genres",
+  component: "song",
+};
+
+Grid.propTypes = {
+  count: PropTypes.number,
+  model: PropTypes.string,
+  filter: PropTypes.any,
+  component: PropTypes.string,
 };
 
 export default Grid;
