@@ -23,21 +23,24 @@ import {
 const models = { albums, artists, genres, concerts, events, songs, products };
 
 const Grid = (props) => {
-  const { model, filter, count, childSx, component } = props;
-  console.log("models", models[model]);
+  const { model, filter, count, childSx, component, sx } = props;
+
   return (
     <Box
       sx={{
         flexGrow: 1,
         display: "flex",
-        flexDirection: "column",
-        gap: "20px",
       }}
     >
       <Box
-        sx={{ width: "100%", display: "flex", gap: "20px", flexWrap: "wrap" }}
+        sx={{
+          width: "100%",
+          display: "flex",
+          gap: "20px",
+          flexWrap: "wrap",
+          ...sx,
+        }}
       >
-        
         {models[model].slice(0, count).map((item, i) => (
           <InViewComponent
             delay={`0.${i + 2}s`}

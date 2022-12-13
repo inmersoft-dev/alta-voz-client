@@ -14,6 +14,7 @@ import Artists from "./Artists/Artists";
 import TopPlaylists from "./TopPlaylists/TopPlaylists";
 import TopVideos from "./TopVideos/TopVideos";
 import Moods from "./Moods/Moods";
+import Discover from "./Discover/Discover";
 // import CatchToAction from "./CatchToAction/CatchToAction";
 
 const Streaming = () => {
@@ -31,6 +32,7 @@ const Streaming = () => {
       <TopPlaylists />
       <TopVideos />
       <Moods />
+      <Discover />
       {/* <CatchToAction /> */}
     </SitoContainer>
   );
