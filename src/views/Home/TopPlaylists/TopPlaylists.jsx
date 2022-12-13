@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { css } from "@emotion/css";
 
 // @mui/material
-import { useTheme, Box, Button, Typography } from "@mui/material";
+import { Box, Button, Typography } from "@mui/material";
 
 // components
 import Grid from "../../../components/Grid/Grid";
@@ -13,7 +13,6 @@ import Grid from "../../../components/Grid/Grid";
 import { useLanguage } from "../../../context/LanguageProvider";
 
 const TopPlaylists = () => {
-  const theme = useTheme();
   const { languageState } = useLanguage();
 
   return (
@@ -27,7 +26,6 @@ const TopPlaylists = () => {
           lg: "40px 4rem 40px 4rem",
           xs: "30px 20px",
         },
-        background: theme.palette.background.paper,
       }}
     >
       <Box display="flex" alignItems="center" justifyContent="space-between">
