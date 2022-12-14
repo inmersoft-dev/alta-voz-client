@@ -62,34 +62,50 @@ const Artists = () => {
   return (
     <Box
       sx={{
-        marginRight: "-50px",
         gap: "20px",
         display: "flex",
+        justifyContent: "center",
+        height: "50vh",
         flexDirection: "column",
         padding: {
           xl: "40px 0 40px 0",
           xs: "40px 0 40px 0",
         },
+        background: theme.palette.background.paper,
       }}
     >
       <Box
         sx={{
           width: "100%",
           height: "100%",
+          display: "flex",
+          justifyContent: "center",
           padding: "0 40px",
+          gap: "40px",
         }}
       >
         <Box sx={{ width: "270px", height: "270px", marginBottom: "-40px" }}>
-          {/* <SitoImage
+          <SitoImage
             sx={{ width: "100%", height: "100%", borderRadius: "100%" }}
             src={
               cArtist.photo ||
               `https://xsgames.co/randomusers/assets/avatars/${
                 Math.floor(Math.random() * 10) % 2 === 0 ? "male" : "female"
-              }/${index}.jpg`
+              }/0.jpg`
             }
             alt={cArtist.name}
-          /> */}
+          />
+        </Box>
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            width: "500px",
+            height: "500px",
+          }}
+        >
+          <Typography variant="h3">{artists[0].name}</Typography>
+          <Typography>{artists[0].biography}</Typography>
         </Box>
       </Box>
     </Box>
