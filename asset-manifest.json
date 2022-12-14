@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/alta-voz-client/static/css/main.2e560d63.css",
-    "main.js": "/alta-voz-client/static/js/main.ed6334ba.js",
+    "main.js": "/alta-voz-client/static/js/main.e0a8a0bd.js",
     "static/media/noGenre.png": "/alta-voz-client/static/media/noGenre.628a02d3d13e13c7680f.png",
     "static/media/noPhoto.png": "/alta-voz-client/static/media/noPhoto.157f088b56f86d22066e.png",
     "static/media/noBackground.jpg": "/alta-voz-client/static/media/noBackground.226f0c1ca55046269f88.jpg",
@@ -24,10 +24,10 @@
     "static/media/slick.woff": "/alta-voz-client/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/alta-voz-client/index.html",
     "main.2e560d63.css.map": "/alta-voz-client/static/css/main.2e560d63.css.map",
-    "main.ed6334ba.js.map": "/alta-voz-client/static/js/main.ed6334ba.js.map"
+    "main.e0a8a0bd.js.map": "/alta-voz-client/static/js/main.e0a8a0bd.js.map"
   },
   "entrypoints": [
     "static/css/main.2e560d63.css",
-    "static/js/main.ed6334ba.js"
+    "static/js/main.e0a8a0bd.js"
   ]
 }
