@@ -15,12 +15,13 @@ const dark = createTheme({
       main: "#2F4858",
       light: "#586c79",
       dark: "#20323d",
-      contrastText: "#222",
+      contrastText: "#fff",
     },
     disabled: {
       dark: "#9a9a9a",
       main: "#c3c3c3",
       light: "#e3e3e3",
+      contrastText: "#fff",
     },
     error: {
       main: "#f44336",

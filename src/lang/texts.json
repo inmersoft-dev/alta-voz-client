@@ -114,7 +114,15 @@
         "Title": "Descubrir música",
         "Tooltip": "Filtros",
         "Filters": {
-          "Genres": "Género"
+          "Genres": "Género",
+          "TimePreview": "Lanzamiento",
+          "TimePreviews": [
+            "Hoy",
+            "Ayer",
+            "Hace 4 días",
+            "Hace una semana",
+            "Hace un mes"
+          ]
         }
       }
     },

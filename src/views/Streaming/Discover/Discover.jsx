@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useReducer } from "react";
 import Slider from "react-slick";
 
 // @mui/material
@@ -26,7 +26,46 @@ const Discover = () => {
 
   const [showFilters, setShowFilters] = useState(false);
 
-  const addFilter = (filter) => {};
+  const genreReducer = (genresState, action) => {
+    const { type } = action;
+    switch (type) {
+      case "set": {
+        const { index } = action;
+        genresState[index].active = !genresState[index];
+        return [...genresState];
+      }
+      default:
+        return [...genres, { id: "all", name: "Todos" }].reverse();
+    }
+  };
+
+  const [genresFilters, setGenresFilters] = useReducer(
+    genreReducer,
+    [...genres, { id: "all", name: "Todos" }].reverse()
+  );
+
+  const timeReducer = (timeState, action) => {
+    const { type } = action;
+    switch (type) {
+      case "set": {
+        const { index } = action;
+        if (timeState[index].active)
+          timeState[index].active = !timeState[index];
+        else timeState[index].active = true;
+        return [...timeState];
+      }
+      default:
+        return languageState.texts.Streaming.Discover.Filters.TimePreviews.map(
+          (item) => ({ name: item })
+        );
+    }
+  };
+  const [timeFilters, setTimeFilters] = useReducer(
+    timeReducer,
+    languageState.texts.Streaming.Discover.Filters.TimePreviews.map((item) => ({
+      name: item,
+    }))
+  );
 
   var settings = {
     dots: false,
@@ -144,13 +183,48 @@ const Discover = () => {
           }}
         >
           <Slider {...settings}>
-            {[...genres, { id: "all", name: "Todos" }].reverse().map((item) => (
-              <Chip
-                sx={{ display: "flex !important", cursor: "pointer" }}
-                key={item.id}
-                label={item.name}
-                onClick={addFilter(item.id)}
-              />
+            {genresFilters.reverse().map((item, i) => (
+              <Box key={item.name} sx={{ paddingLeft: i > 0 ? "10px" : 0 }}>
+                <Chip
+                  sx={{ display: "flex !important", cursor: "pointer" }}
+                  label={item.name}
+                  variant={item.active ? "filled" : "outlined"}
+                  color={item.active ? "primary" : "disabled"}
+                  onClick={() => setGenresFilters({ type: "set", index: i })}
+                />
+              </Box>
+            ))}
+          </Slider>
+        </Box>
+        <Typography sx={{ marginTop: "10px" }}>
+          {languageState.texts.Streaming.Discover.Filters.TimePreview}
+        </Typography>
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            width: "100%",
+            marginTop: "10px",
+            "&:nth-child(2)": {
+              width: "95%",
+              marginLeft: "20px",
+            },
+          }}
+        >
+          <Slider {...settings}>
+            {timeFilters.map((item, i) => (
+              <Box key={item.name} sx={{ paddingLeft: i > 0 ? "10px" : 0 }}>
+                <Chip
+                  sx={{
+                    display: "flex !important",
+                    cursor: "pointer",
+                  }}
+                  label={item.name}
+                  variant={item.active ? "filled" : "outlined"}
+                  color={item.active ? "primary" : "disabled"}
+                  onClick={() => setTimeFilters({ type: "set", index: i })}
+                />
+              </Box>
             ))}
           </Slider>
         </Box>
