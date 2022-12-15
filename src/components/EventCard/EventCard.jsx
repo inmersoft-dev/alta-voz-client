@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { Link } from "react-router-dom";
 
 import PropTypes from "prop-types";
@@ -15,8 +16,7 @@ import SitoImage from "sito-image";
 import noPhoto from "../../assets/images/noPhoto.png";
 import noGenre from "../../assets/images/noGenre.png";
 
-// test
-import { artists } from "../../data/data";
+// utils
 import { parseDateTime } from "../../services/utils/parsers";
 
 const EventCard = (props) => {

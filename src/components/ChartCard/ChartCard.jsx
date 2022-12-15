@@ -6,7 +6,7 @@ import PropTypes from "prop-types";
 import { css } from "@emotion/css";
 
 // @mui/material
-import { useTheme, Box, Typography, Button } from "@mui/material";
+import { useTheme, Box, Typography } from "@mui/material";
 
 // @mui/icons-material
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward"; // right

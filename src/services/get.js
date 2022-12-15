@@ -14,7 +14,7 @@ export const connectionState = async () => {
       headers: getAuth,
     });
     const result = response.status;
-    if (result != 200) return response.statusText;
+    if (result !== 200) return response.statusText;
     return result;
   } catch (err) {
     return String(err);

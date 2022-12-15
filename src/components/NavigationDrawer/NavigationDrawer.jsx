@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { useCallback, useEffect } from "react";
 import { Link } from "react-router-dom";
 

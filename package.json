@@ -2,7 +2,7 @@
   "name": "alta-voz-client",
   "version": "0.4.15",
   "private": false,
-  "homepage": "https://inmersoft-dev.github.io/alta-voz-client/",
+  "homepage": "https://alta-voz-d4a05.web.app/",
   "dependencies": {
     "@emotion/css": "^11.10.5",
     "@emotion/react": "^11.10.5",
@@ -13,13 +13,10 @@
     "@mui/material": "^5.10.15",
     "@mui/styles": "^5.10.15",
     "@mui/x-date-pickers": "^5.0.8",
-    "@testing-library/jest-dom": "^5.14.1",
-    "@testing-library/react": "^13.0.0",
-    "@testing-library/user-event": "^13.2.1",
     "axios": "^1.2.0",
-    "carousel-react-rcdev": "^0.0.5",
     "dayjs": "^1.11.6",
     "env-cmd": "^10.1.0",
+    "firebase-tools": "^11.16.1",
     "framer-motion": "^7.6.12",
     "md5": "^2.3.0",
     "react": "^18.2.0",
@@ -30,10 +27,10 @@
     "react-router-dom": "^6.4.3",
     "react-scripts": "5.0.1",
     "react-slick": "^0.29.0",
+    "serve": "^14.1.2",
     "sito-container": "^0.4.1",
     "sito-image": "^0.13.1",
-    "slick-carousel": "^1.8.1",
-    "web-vitals": "^2.1.0"
+    "slick-carousel": "^1.8.1"
   },
   "scripts": {
     "start": "env-cmd -f .env react-scripts start",
@@ -41,7 +38,11 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "firebase-deploy": "firebase deploy",
+    "init": "firebase init",
+    "login": "firebase login",
+    "serve": "serve -s build"
   },
   "eslintConfig": {
     "extends": [
