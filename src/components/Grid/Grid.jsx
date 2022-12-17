@@ -1,5 +1,9 @@
 /* eslint-disable no-unused-vars */
+import { useRef } from "react";
 import PropTypes from "prop-types";
+
+// framer-motion
+import { useInView } from "framer-motion";
 
 // @mui/material
 import { Box } from "@mui/material";
@@ -25,6 +29,9 @@ const models = { albums, artists, genres, concerts, events, songs, products };
 
 const Grid = (props) => {
   const { model, filter, count, childSx, component, sx } = props;
+
+  const ref = useRef(null);
+  const isInView = useInView(ref);
 
   return (
     <Box

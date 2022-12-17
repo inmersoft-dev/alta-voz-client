@@ -291,8 +291,8 @@ const Store = () => {
           >
             {languageState.texts.Store.Filters.Title}
           </Typography>
-          {filterTypes.map((item) => (
-            <Accordion key={item.name}>
+          {filterTypes.map((item, i) => (
+            <Accordion key={item.name} defaultExpanded={i === 0 ? true : false}>
               <AccordionSummary expandIcon={<ExpandMoreIcon />}>
                 <Typography>{item.label}</Typography>
               </AccordionSummary>
@@ -389,7 +389,7 @@ const Store = () => {
           }}
         >
           <Loading visible={loading === 1} />
-          <Grid count={8} model="products" component="product" scrollable />
+          <Grid count={9} model="products" component="product" scrollable />
         </Box>
       </Box>
     </Box>
