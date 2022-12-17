@@ -1,6 +1,6 @@
 {
   "name": "alta-voz-client",
-  "version": "0.4.15",
+  "version": "0.5.5",
   "private": false,
   "homepage": "https://alta-voz-d4a05.web.app/",
   "dependencies": {
