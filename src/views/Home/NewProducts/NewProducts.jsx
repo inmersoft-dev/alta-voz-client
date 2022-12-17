@@ -36,7 +36,7 @@ const NewProducts = () => {
           <Button>{languageState.texts.Home.NewProducts.SeeMore}</Button>
         </Link>
       </Box>
-      <Grid count={6} model="products" component="product" />
+      <Grid count={4} model="products" component="product" />
     </Box>
   );
 };

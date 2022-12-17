@@ -12,9 +12,6 @@ import { useTheme, Box, Typography } from "@mui/material";
 // sito components
 import SitoImage from "sito-image";
 
-// data
-import { genres } from "../../data/data";
-
 const SongCard = (props) => {
   const theme = useTheme();
   const { item, index } = props;
@@ -31,54 +28,31 @@ const SongCard = (props) => {
         flexDirection="column"
         justifyContent="center"
       >
-        <Box
+        <SitoImage
           sx={{
-            position: "relative",
-            width: "200px",
-            height: "200px",
+            width: "300px",
+            height: "300px",
             borderRadius: "15px",
+            objectFit: "cover",
           }}
+          src={
+            item.photo ||
+            `https://loremflickr.com/320/240/${
+              ["brazil", "paris", "canada"][Math.floor(Math.random() * 3)]
+            }/all?lock=${index}`
+          }
+          alt={item.id}
+        />
+
+        <Typography
+          fontWeight="bold"
+          variant="subtitle1"
+          sx={{ color: theme.palette.disabled.main, textAlign: "center" }}
         >
-          <SitoImage
-            sx={{
-              width: "200px",
-              height: "200px",
-              borderRadius: "15px",
-              objectFit: "cover",
-            }}
-            src={
-              item.photo ||
-              `https://loremflickr.com/320/240/${
-                ["brazil", "paris", "canada"][Math.floor(Math.random() * 3)]
-              }/all?lock=${index}`
-            }
-            alt={item.id}
-          />
-          <Box
-            sx={{
-              top: 0,
-              left: 0,
-              display: "flex",
-              flexDirection: "column",
-              position: "absolute",
-              width: "100%",
-              height: "100%",
-              justifyContent: "center",
-              alignItems: "center",
-              zIndex: 20,
-              background: "#00000091",
-              borderRadius: "15px",
-            }}
-          >
-            <Typography
-              fontWeight="bold"
-              sx={{ color: theme.palette.disabled.main, textAlign: "center" }}
-            >
-              {item.name}
-            </Typography>
-            <Typography>$ {item.price}</Typography>
-          </Box>
-        </Box>
+          {item.name}
+        </Typography>
+        <Typography variant="body2">{item.type}</Typography>
+        <Typography variant="caption">$ {item.price}</Typography>
       </Box>
     </Link>
   );

@@ -1,4 +1,4 @@
-import { useState, useReducer } from "react";
+import { useState, useEffect, useReducer } from "react";
 import { Link, useLocation } from "react-router-dom";
 
 // @mui/material
@@ -30,6 +30,7 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import ShoppingBagIcon from "@mui/icons-material/ShoppingBag";
 
 // components
+import Grid from "../../components/Grid/Grid";
 import Loading from "../../components/Loading/Section";
 
 // contexts
@@ -169,9 +170,14 @@ const Store = () => {
         return { colors: [...colors] };
     }
   };
+
   const [filters, setFilters] = useReducer(filtersReducer, {
     colors: [...colors],
   });
+
+  useEffect(() => {
+    setLoading(0);
+  }, []);
 
   return (
     <Box sx={{ display: "flex", flexDirection: "column", height: "100%" }}>
@@ -270,7 +276,7 @@ const Store = () => {
           {languageState.texts.Store.Title}
         </Typography>
       </Box>
-      <Box sx={{ padding: "40px" }}>
+      <Box sx={{ padding: "40px", display: "flex" }}>
         <Box
           sx={{
             display: "flex",
@@ -374,8 +380,16 @@ const Store = () => {
             </Accordion>
           ))}
         </Box>
-        <Box sx={{ width: "100%", height: "100%", position: "relative" }}>
+        <Box
+          sx={{
+            width: "100%",
+            height: "100%",
+            position: "relative",
+            marginTop: "52px",
+          }}
+        >
           <Loading visible={loading === 1} />
+          <Grid count={8} model="products" component="product" scrollable />
         </Box>
       </Box>
     </Box>
