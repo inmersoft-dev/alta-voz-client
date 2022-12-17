@@ -1,5 +1,10 @@
 {
   "es": {
+    "Tooltips": {
+      "Search": "Buscar",
+      "Account": "Mi cuenta",
+      "Cart": "Carrito"
+    },
     "Buttons": {
       "ListenNow": "Escuchar ahora!",
       "Login": "Iniciar sesión"
@@ -123,6 +128,17 @@
             "Hace una semana",
             "Hace un mes"
           ]
+        }
+      }
+    },
+    "Store": {
+      "Title": "Nuestras ofertas",
+      "Home": "Tienda",
+      "Filters": {
+        "Title": "Filtros",
+        "Price": {
+          "Max": "Max",
+          "Min": "Min"
         }
       }
     },
