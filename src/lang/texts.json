@@ -142,6 +142,20 @@
         }
       }
     },
+    "Artist": {
+      "Hero": {
+        "Play": "Reproducir",
+        "Shuffle": "Aleatorio",
+        "Follow": "Seguir",
+        "Info": "Información",
+        "Radio": "Radio",
+        "Share": "Compartir"
+      },
+      "Grid": {
+        "Title": "Top tracks"
+      },
+      "Album": {}
+    },
     "Navbar": {
       "Search": {
         "placeholder": "Buscar..."
