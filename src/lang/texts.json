@@ -5,6 +5,12 @@
       "Account": "Mi cuenta",
       "Cart": "Carrito"
     },
+    "ListComponent": {
+      "Title": "Título",
+      "Artist": "Artista",
+      "Album": "Álbum",
+      "Time": "Duración"
+    },
     "Buttons": {
       "ListenNow": "Escuchar ahora!",
       "Login": "Iniciar sesión"
@@ -154,7 +160,18 @@
       "Grid": {
         "Title": "Top tracks"
       },
-      "Album": {}
+      "Albums": {
+        "Title": "Álbumes",
+        "SeeMore": "Ver más álbumes"
+      },
+      "Simples": {
+        "Title": "Simples",
+        "SeeMore": "Ver más simples"
+      },
+      "TopTracks": {
+        "Title": "Top tracks",
+        "SeeMore": "Ver más tracks"
+      }
     },
     "Navbar": {
       "Search": {

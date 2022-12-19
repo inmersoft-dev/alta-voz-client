@@ -27,7 +27,6 @@ const ArtistCard = (props) => {
     >
       <Box
         gap="10px"
-        component="a"
         display="flex"
         alignItems="center"
         flexDirection="column"
