@@ -33,7 +33,8 @@ import { useMode } from "../../context/ModeProvider";
 import { useLanguage } from "../../context/LanguageProvider";
 
 // images
-import logo from "../../assets/images/logo.png";
+import logoLight from "../../assets/images/logo-light.png";
+import logoDark from "../../assets/images/logo-dark.png";
 
 const Navbar = () => {
   const theme = useTheme();
@@ -77,11 +78,11 @@ const Navbar = () => {
           })}
         >
           <SitoImage
-            src={logo}
+            src={modeState.mode === "light" ? logoLight : logoDark}
             alt="logo"
             sx={{
-              width: "80px",
-              height: "30px",
+              width: "110px",
+              height: "25px",
             }}
           />
         </Link>
